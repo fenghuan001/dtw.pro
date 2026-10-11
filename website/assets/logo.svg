@@ -1,0 +1,19 @@
+<svg class="brand-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1254 1254" fill="#ffffff" role="img" aria-labelledby="logo-title">
+    <title id="logo-title">D 与轨道四角星个人品牌标志</title>
+    <defs>
+      <clipPath id="left-crossing"><rect x="345" y="760" width="151" height="150"/></clipPath>
+      <clipPath id="right-crossing"><rect x="750" y="600" width="240" height="270"/></clipPath>
+      <mask id="orbit-separation" maskUnits="userSpaceOnUse" x="0" y="0" width="1254" height="1254" style="mask-type:luminance">
+        <rect width="1254" height="1254" fill="white"/>
+        <!-- Only above the left crossing and below the right crossing are separated. -->
+        <path clip-path="url(#left-crossing)" d="M 351 815 C 544 817 864 743 1027 616" fill="none" stroke="black" stroke-width="36"/>
+        <path clip-path="url(#right-crossing)" d="M 351 883 C 577 888 912 773 1058 630" fill="none" stroke="black" stroke-width="36"/>
+      </mask>
+    </defs>
+    <!-- D: compound path with a transparent counter. -->
+    <path mask="url(#orbit-separation)" fill-rule="evenodd" d="M 252 325 L 578 325 C 808 325 950 444 956 650 C 961 854 832 978 590 978 L 249 978 L 249 971 C 327 957 354 938 354 869 L 354 423 C 354 362 330 341 252 333 Z M 487 398 L 487 891 C 487 936 508 952 575 952 C 717 952 803 857 803 652 C 803 450 717 347 579 347 L 528 347 C 497 347 487 362 487 398 Z"/>
+    <!-- Swept orbit: pointed left return, thicker foreground, tapered rising tip. -->
+    <path d="M 341 644 C 236 683 132 735 129 786 C 123 849 218 881 351 883 C 577 888 912 773 1058 630 C 1088 599 1099 566 1101 538 C 1083 569 1058 591 1027 616 C 864 743 544 817 351 815 C 244 814 183 806 178 782 C 171 752 244 694 336 651 Q 342 648 341 644 Z"/>
+    <!-- Four-point star on the upper-right orbit endpoint. -->
+    <path d="M 1117 403 C 1109 458 1099 469 1045 478 C 1098 485 1109 498 1117 551 C 1125 498 1136 486 1190 479 C 1136 471 1126 458 1117 403 Z"/>
+  </svg>
