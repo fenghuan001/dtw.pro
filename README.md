@@ -2,7 +2,7 @@
 
 Static personal portfolio built with HTML, CSS and JavaScript.
 
-Planned public URL: https://fenghuan001.github.io/dtw.pro/dtw.pro/
+Public URL: https://fenghuan001.github.io/dtw.pro/
 
 ## Deployment
 
@@ -21,6 +21,11 @@ to `main` or `master`. It can also be started manually from the Actions tab.
 4. Wait for the deployment workflow to succeed.
 5. Open the public URL and check the changed pages and CV download.
 
+For a browser-only update, open the relevant folder on GitHub, select
+**Add file → Upload files**, upload the replacement file with the same name,
+and select **Commit changes** on `main`. Put images in `website/assets/` and
+the CV in `website/`. Check the **Actions** tab for a successful deployment.
+
 When adding a page, also update `website/sitemap.xml`.
 Keep image and page links relative so they work under `/dtw.pro/`.
 
@@ -35,7 +40,22 @@ assets, credentials and `.env` files are excluded from the deployment copy.
 
 The seven HTML pages have no missing local `src` or `href` file targets.
 Nine CV links point to the included PDF. The social preview URLs, canonical
-URLs, sitemap and robots file use the planned GitHub Pages project URL.
+URLs, sitemap and robots file use the live GitHub Pages project URL.
 
-The site has not yet been published. Browser layout, public HTTPS, live page
-refreshes and CV download still require verification after deployment.
+Published and checked on October 11, 2026:
+
+- The deployment workflow completed successfully in 25 seconds.
+- All seven pages opened through the public HTTPS URL.
+- All eleven page images loaded successfully.
+- Desktop homepage and 390-pixel mobile layouts were inspected. No horizontal
+  overflow was found on the seven pages at that mobile width.
+- The Quark case page refreshed successfully without a 404.
+- The CV was downloaded through its homepage link. Its SHA-256 hash matched
+  the original 124,657-byte PDF.
+- Work and contact navigation reached their intended sections. Email links
+  point to the displayed Outlook address; no test email was sent.
+- No browser errors or warnings were captured in the checked pages.
+
+The site currently has no LinkedIn link. Browser checks do not replace a full
+accessibility audit or tests on physical mobile devices. No Lighthouse score
+or worldwide latency guarantee is claimed.
