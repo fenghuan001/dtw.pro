@@ -1,0 +1,6 @@
+_assets-original/
+.env
+.env.*
+!.env.example
+Thumbs.db
+.DS_Store
