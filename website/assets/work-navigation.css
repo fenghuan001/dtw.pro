@@ -1,0 +1,23 @@
+
+.work-dropdown{position:relative;display:inline-flex;align-items:center;gap:2px}
+.work-toggle{display:grid;place-items:center;width:30px;height:34px;padding:0;border:0;background:transparent;color:inherit;cursor:pointer;border-radius:5px}
+#tb .work-toggle{color:var(--tb-ink,#fff)}
+.work-toggle:hover{background:rgba(111,194,179,.15)}
+.work-toggle svg{width:12px;height:12px;transition:transform .2s ease}
+.work-toggle[aria-expanded="true"] svg{transform:rotate(180deg)}
+.work-projects{position:absolute;top:calc(100% + 12px);left:0;width:220px;max-width:calc(100vw - 40px);padding:8px;background:#fff;border:1px solid #dde8e8;border-radius:12px;box-shadow:0 12px 32px rgba(10,46,41,.16);z-index:150}
+.work-projects[hidden]{display:none!important}
+#tb .nav .work-projects a,.work-projects a{display:block;padding:11px 13px;color:#38474a;opacity:1;text-decoration:none;border:0;border-radius:7px;font:500 14px/1.4 var(--font-sans,system-ui,sans-serif);white-space:normal}
+#tb .nav .work-projects a:hover,.work-projects a:hover{background:#f0f6f4;color:#0a5b50;border:0}
+#tb .nav .work-projects a[aria-current="page"],.work-projects a[aria-current="page"]{background:#e9f3f0;color:#0a5b50;font-weight:700}
+.work-toggle:focus-visible,.work-projects a:focus-visible{outline:3px solid #d6a84b;outline-offset:2px}
+@media(max-width:520px){#tb .nav{gap:10px}#tb .work-toggle{width:24px}#tb .work-projects{position:fixed;top:70px;left:20px;right:20px;width:auto;max-width:none;max-height:calc(100dvh - 90px);overflow:auto}#tb .work-projects a{padding:13px}}
+@media(prefers-reduced-motion:reduce){.work-toggle svg{transition:none}}
+@media print{.work-toggle,.work-projects{display:none!important}}
+
+#tb.stuck .work-toggle{color:#fff}
+
+/* Dropdown links keep their own palette in both navigation states. */
+#tb.stuck .nav .work-projects a{color:#38474a;opacity:1;border-bottom:0}
+#tb.stuck .nav .work-projects a:hover{color:#0a5b50;background:#f0f6f4;border-bottom:0}
+#tb.stuck .nav .work-projects a[aria-current="page"]{color:#0a5b50;background:#e9f3f0;font-weight:700}
