@@ -4,22 +4,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Quark Scan King — December Differentiation Campaign</title>
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<meta name="description" content="Two parallel campaign lines off one brief, for Alibaba Group. Case 02 — Du Tingwei, Anna.">
 <link rel="canonical" href="https://fenghuan001.github.io/dtw.pro/quark-scan-king-case.html">
 <meta property="og:url" content="https://fenghuan001.github.io/dtw.pro/quark-scan-king-case.html">
+<meta property="og:image" content="https://fenghuan001.github.io/dtw.pro/assets/og-card.jpg">
+<meta name="twitter:image" content="https://fenghuan001.github.io/dtw.pro/assets/og-card.jpg">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta name="description" content="Two parallel campaign lines off one brief, for Alibaba Group. Case 02 — Du Tingwei, Anna.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Du Tingwei, Anna">
 <meta property="og:title" content="Quark Scan King — December Differentiation Campaign">
 <meta property="og:description" content="Two parallel campaign lines off one brief, for Alibaba Group. Case 02 — Du Tingwei, Anna.">
-<meta property="og:image" content="https://fenghuan001.github.io/dtw.pro/assets/og-card.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Du Tingwei, Anna — Account Executive, Integrated Marketing and Content Strategy">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Quark Scan King — December Differentiation Campaign">
 <meta name="twitter:description" content="Two parallel campaign lines off one brief, for Alibaba Group. Case 02 — Du Tingwei, Anna.">
-<meta name="twitter:image" content="https://fenghuan001.github.io/dtw.pro/assets/og-card.jpg">
 <meta name="theme-color" content="#0A2E29">
 
 <style>
@@ -115,7 +115,37 @@ section+section{border-top:1px solid var(--line)}
 }
 @media(max-width:560px){ .resp{grid-template-columns:1fr} .meta{grid-template-columns:1fr} }
 </style>
-</head>
+<style>body{--muted:#62666E}a:focus-visible,button:focus-visible{outline:3px solid #D6A84B;outline-offset:5px}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation:none!important;transition:none!important}}</style><style>.sec-head .background-copy{max-width:820px;font-size:14.5px;line-height:1.75}.resp-item .badge{position:static;display:inline-block;margin-bottom:12px;max-width:100%;line-height:1.5;border-radius:8px}.resp-item h4{padding-right:0}</style><style>
+.hero-summary{max-width:740px;margin:22px 0 0;font-size:16px;line-height:1.75}
+.topic-status{font-size:11px;font-weight:600;color:var(--muted);margin-bottom:7px}
+.alternatives-label{margin-top:5px}
+.shot-img,.gallery.two .shot-img{height:auto;background:#fff}
+.shot-img img{height:auto;object-fit:contain}
+.shot-img a{display:block}
+.shot-img a:focus-visible{outline-offset:-4px}
+.shot-body .desc{font-size:14px;line-height:1.7}
+.shot-body .tag{font-size:11px}
+.alt{font-size:12.5px}
+.mrow .lbl{font-size:11.5px}
+.results .fine{color:rgba(255,255,255,.76)}
+#tb.stuck .mark{color:#fff}
+.case-navigation{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.case-navigation a{font-size:14px;color:var(--pine-accent);font-weight:600;text-decoration:none}
+.case-navigation a:hover{text-decoration:underline}
+.footer{background:transparent;border-top:1px solid var(--line)}
+</style><style>
+.copy-columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
+.copy-stream h3{font-family:var(--font-sans);font-size:16px;margin-bottom:20px;padding-left:12px;border-left:3px solid var(--accent)}
+.copy-stream.dunhuang h3{border-left-color:var(--gold);color:var(--gold-2)}
+.copy-stream.product h3{color:var(--accent-2)}
+.social-copy-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;margin-bottom:18px}
+.social-copy-card:last-child{margin-bottom:0}
+.copy-account{font-size:12px;font-weight:600;color:var(--muted);margin-bottom:16px}
+.original-copy{font-size:14px;line-height:1.9;color:var(--ink-2);white-space:pre-line;overflow-wrap:anywhere}
+.copy-purpose{font-size:13px;line-height:1.7;color:var(--muted);margin:20px 0 0}
+@media(max-width:760px){.copy-columns{grid-template-columns:1fr;gap:32px}.social-copy-card{padding:22px 20px}}
+@media print{.social-copy-card{opacity:1!important;transform:none!important;break-inside:avoid}}
+</style><link rel="stylesheet" href="assets/work-navigation.css"><style>img{height:auto}</style></head>
 <body>
 <div id="sp" aria-hidden="true"></div>
 <style id="plcss">
@@ -182,19 +212,20 @@ section+section{border-top:1px solid var(--line)}
     if(reduce.matches) rest(); else frame = requestAnimationFrame(tick);
   }
   function done(){
+    if(ready) return;
     ready = true;
     if(!shown){ loader.style.display = 'none'; document.body.setAttribute('aria-busy','false'); return; }
-    // let the star finish the orbit it is currently on, rather than cutting it off
-    var el = performance.now() - showAt;
-    finishAt = showAt + Math.max(1, Math.ceil(el / ORBIT)) * ORBIT;
+    finishAt = performance.now();
     if(reduce.matches) hide(); else frame = requestAnimationFrame(tick);
   }
   window.finishLogoLoading = done;
 
   // only appear when the page is actually slow
   setTimeout(function(){ if(!ready) show(); }, GRACE);
-  if(document.readyState === 'complete') done();
-  else window.addEventListener('load', done, { once:true });
+  // Release the overlay when readable HTML is ready, independently of images.
+  setTimeout(done, 2000);
+  if(document.readyState !== 'loading') done();
+  else document.addEventListener('DOMContentLoaded', done, { once:true });
   document.addEventListener('visibilitychange', function(){ if(!document.hidden && shown && ready) hide(); });
 })();
 </script>
@@ -225,9 +256,9 @@ html{scroll-behavior:smooth}
   <div class="in">
     <a class="brand" href="index.html" aria-label="Back to the portfolio home"><svg class="mark" viewBox="0 0 1254 1254" fill="currentColor" aria-hidden="true" focusable="false"><defs><clipPath id="tbm-l"><rect x="345" y="760" width="151" height="150"/></clipPath><clipPath id="tbm-r"><rect x="750" y="600" width="240" height="270"/></clipPath><mask id="tbm-o" maskUnits="userSpaceOnUse" x="0" y="0" width="1254" height="1254" style="mask-type:luminance"><rect width="1254" height="1254" fill="white"/><path clip-path="url(#tbm-l)" d="M 351 815 C 544 817 864 743 1027 616" fill="none" stroke="black" stroke-width="36"/><path clip-path="url(#tbm-r)" d="M 351 883 C 577 888 912 773 1058 630" fill="none" stroke="black" stroke-width="36"/></mask></defs><path mask="url(#tbm-o)" fill-rule="evenodd" d="M 252 325 L 578 325 C 808 325 950 444 956 650 C 961 854 832 978 590 978 L 249 978 L 249 971 C 327 957 354 938 354 869 L 354 423 C 354 362 330 341 252 333 Z M 487 398 L 487 891 C 487 936 508 952 575 952 C 717 952 803 857 803 652 C 803 450 717 347 579 347 L 528 347 C 497 347 487 362 487 398 Z"/><path d="M 341 644 C 236 683 132 735 129 786 C 123 849 218 881 351 883 C 577 888 912 773 1058 630 C 1088 599 1099 566 1101 538 C 1083 569 1058 591 1027 616 C 864 743 544 817 351 815 C 244 814 183 806 178 782 C 171 752 244 694 336 651 Q 342 648 341 644 Z"/><path d="M 1117 403 C 1109 458 1099 469 1045 478 C 1098 485 1109 498 1117 551 C 1125 498 1136 486 1190 479 C 1136 471 1126 458 1117 403 Z"/></svg></a>
     <nav class="nav" aria-label="Main">
-      <a href="index.html#work">Selected Work</a>
+      <div class="work-dropdown"><a href="index.html#work">Selected Work</a><button class="work-toggle" type="button" aria-label="Show selected projects" aria-expanded="false" aria-controls="work-projects"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="m2 4 4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></button><div class="work-projects" id="work-projects" hidden><a href="haidilao-case.html">Haidilao</a><a href="quark-scan-king-case.html" aria-current="page">Quark Scan King</a><a href="juhuasuan-case.html">Juhuasuan</a><a href="eleme-lichun-case.html">Ele.me</a><a href="taobao-live-case.html">Taobao Live</a></div></div>
       <a href="pitch-experience.html">Pitch</a>
-      <a href="anna-du-cv.pdf" download>CV</a>
+      <a href="resume.html">Resume</a>
       <a href="index.html#contact">Contact</a>
     </nav>
   </div>
@@ -324,15 +355,16 @@ html{scroll-behavior:smooth}
     </div>
     <h1>Quark Scan King</h1>
     <p class="sub">December Differentiation Campaign</p>
+    <p class="hero-summary">Supported a product-awareness campaign through content planning, official-account and KOL copy, social graphics and campaign reporting.</p>
     <dl class="meta">
       <div><dt>Client</dt><dd>Quark<br>(Alibaba Group)</dd></div>
       <div><dt>Timeline</dt><dd>December 2023</dd></div>
-      <div><dt>My Role</dt><dd>Account Executive<br>Shengu Media</dd></div>
-      <div><dt>Scope</dt><dd>Content plan · KOL ·<br>Design · Review data</dd></div>
+      <div><dt>My Role</dt><dd>Account Executive<br>Beijing Shiny Gold</dd></div>
+      <div><dt>Scope</dt><dd>Content Planning · KOL Creative Directions ·<br>Social Graphics · Campaign Reporting</dd></div>
     </dl>
     <div class="result-strip">
       <span class="num">110M+</span>
-      <span class="txt">Weibo reads at an overall CPM of 2.7 — delivered across two parallel campaign lines run off one brief.</span>
+      <span class="txt">Campaign-wide Weibo reads, as recorded in the post-campaign review.</span>
     </div>
   </div>
 </header>
@@ -360,13 +392,13 @@ html{scroll-behavior:smooth}
     <div class="out-band">
       <div class="out-head">
         <span class="eyebrow">What I produced</span>
-        <span class="hint">The scope of my own output across both lines</span>
+        <span class="hint">My output across both campaign streams</span>
       </div>
       <div class="out-grid">
-        <div class="out"><b>4</b><span>topic sets written — branded search and outer conversation for each line</span></div>
-        <div class="out"><b>6</b><span>product graphics designed from app screenshots</span></div>
-        <div class="out"><b>5</b><span>KOC material angles produced for the Dunhuang partnership</span></div>
-        <div class="out"><b>2</b><span>campaign lines planned off one brief</span></div>
+        <div class="out"><b>80+</b><span>social copy drafts used in published official-account and KOL content</span></div>
+        <div class="out"><b>27</b><span>unique hashtag ideas proposed across both campaign streams</span></div>
+        <div class="out"><b>6</b><span>product feature graphics created</span></div>
+        <div class="out"><b>5</b><span>Dunhuang KOC content angles developed</span></div>
       </div>
       <div class="out-scope">
         <span class="sl">Across</span>
@@ -383,49 +415,20 @@ html{scroll-behavior:smooth}
 <section>
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">01 — The Brief</span>
-      <h2>What the campaign had to do</h2>
-      <p>Background only. Everything from "My Contribution" onwards is my own output.</p>
-    </div>
-
-    <div class="brief">
-      <div>
-        <p class="lede">Quark Scan King is a document-processing app for scanning, OCR and file conversion. In its early growth phase it needed to stand out in a crowded scanning-tool category, build name recognition, and give users a reason to remember it.</p>
-        <p style="font-size:14.5px;color:var(--muted)">The campaign was built around the app's December version release, with "intelligence" as the unifying product claim — and was run as two deliberately different lines off one brief.</p>
-        <div class="chal">
-          <div><b>Awareness</b>Break out of a category where every tool makes similar functional claims — and create a memory hook rather than a feature list.</div>
-          <div class="g"><b>Differentiation</b>Frame the release as "a new kind of scanning", not just an update to an existing app.</div>
-        </div>
-      </div>
-      <div class="brief-facts">
-        <dl>
-          <div><dt>Product</dt><dd>Scanning · OCR · file conversion</dd></div>
-          <div><dt>Hook</dt><dd>December version release</dd></div>
-          <div><dt>Category</dt><dd>Crowded, with near-identical functional claims</dd></div>
-          <div><dt>Approach</dt><dd>Two parallel lines, one budget, one review</dd></div>
-        </dl>
-      </div>
+      <span class="eyebrow">01 — Background</span>
+      <p class="background-copy">The campaign supported Quark Scan King’s December version release through two streams: communicating upgraded product features and demonstrating scanning and line-art extraction through a Dunhuang cultural partnership.</p>
     </div>
 
     <div class="lines">
       <div class="line-card a">
         <div class="tagline">Line 01</div>
-        <h3>Product line — awareness</h3>
-        <p>Challenge the questions people actually have about old scanning tools, then answer them in a single line: with Quark Scan King there are far fewer questions — it's just smart and easy to use.</p>
-        <ul>
-          <li>1 TVC · functional poster set · teaser posters</li>
-          <li>KOLs: 黄子弘凡 vlog · 差评君 video</li>
-        </ul>
+        <h3>Product Awareness</h3>
+        <p>Highlighted the app’s upgraded scanning and document-processing features through everyday work and study situations.</p>
       </div>
       <div class="line-card b">
         <div class="tagline">Line 02</div>
-        <h3>Dunhuang line — credibility</h3>
-        <p>A cultural partnership that proved the product better than any demo. Visitors physically experienced its two hardest features — high-definition scanning and line-art extraction — then took the output home and used it.</p>
-        <ul>
-          <li>Guomao subway mural exhibition, 25–29 December</li>
-          <li>In-app Dunhuang gallery and re-colouring challenge</li>
-          <li>KOLs: illustrators, photographers, cosplayers, cultural voices</li>
-        </ul>
+        <h3>Dunhuang Partnership</h3>
+        <p>Used Dunhuang artwork to demonstrate HD scanning and line-art extraction, inviting users to explore and recolour the images.</p>
       </div>
     </div>
   </div>
@@ -435,44 +438,9 @@ html{scroll-behavior:smooth}
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">02 — My Contribution</span>
-      <h2>Six workstreams across both lines</h2>
+      <h2>My contribution across two campaign streams</h2>
     </div>
-    <div class="resp">
-      <div class="resp-item solo">
-        <span class="badge">Solo</span>
-        <h4>KOL content plan</h4>
-        <p>Wrote the KOL copy, built the publishing schedule and allocated assets to each account — then briefed the media team, who executed buyout.</p>
-      </div>
-      <div class="resp-item solo">
-        <span class="badge">Solo</span>
-        <h4>Product benefit graphics</h4>
-        <p>Produced the campaign's product graphics: annotated app screenshots with overlay copy, one per feature story.</p>
-      </div>
-      <div class="resp-item solo">
-        <span class="badge">Solo</span>
-        <h4>Dunhuang KOC materials</h4>
-        <p>Produced the KOC materials across five functional angles — exhibition, line-art extraction, HD scanning, remix and subway.</p>
-      </div>
-      <div class="resp-item contrib">
-        <span class="badge">Contributed</span>
-        <h4>Product line plan</h4>
-        <p>Wrote the communication theme and topic recommendations, the creative asset list, and the creative direction for original KOL content.</p>
-      </div>
-      <div class="resp-item contrib">
-        <span class="badge">Contributed</span>
-        <h4>Dunhuang line plan</h4>
-        <p>Wrote the KOL collaboration formats and the outer-material formats for the cultural partnership.</p>
-      </div>
-      <div class="resp-item contrib">
-        <span class="badge">Contributed</span>
-        <h4>Campaign review</h4>
-        <p>Compiled the performance data that fed the post-campaign review.</p>
-      </div>
-    </div>
-    <div class="legend">
-      <span><i class="dot"></i> <strong>Solo</strong> — briefed, written and delivered by me end to end</span>
-      <span><i class="dot d2"></i> <strong>Contributed</strong> — I owned part of the workstream</span>
-    </div>
+    <div class="resp"><div class="resp-item contrib"><span class="badge">Team contribution</span><h4>Product Communication Planning</h4><p>Developed communication themes, topic recommendations, creative asset ideas and KOL content directions for the product campaign.</p></div><div class="resp-item contrib"><span class="badge">Team contribution</span><h4>Dunhuang Partnership Planning</h4><p>Developed KOL collaboration ideas and supporting content formats connecting the cultural partnership with scanning and line-art extraction.</p></div><div class="resp-item solo"><span class="badge">Independent deliverable</span><h4>KOL Content Planning &amp; Media Coordination</h4><p>Wrote <strong>80+ social copy drafts</strong> for official accounts and KOLs, used in published campaign content. Prepared publishing schedules and asset allocations, and coordinated with the media team on creator placements.</p></div><div class="resp-item solo"><span class="badge">Independent deliverable</span><h4>Product Feature Graphics</h4><p>Created social graphics using app screenshots and explanatory copy to communicate product features.</p></div><div class="resp-item solo"><span class="badge">Independent deliverable</span><h4>Dunhuang KOC Content &amp; Visuals</h4><p>Prepared copy and image materials across five angles: the exhibition, line-art extraction, HD scanning, creative reinterpretation and the subway installation.</p></div><div class="resp-item contrib"><span class="badge">Team contribution</span><h4>Campaign Reporting</h4><p>Compiled performance data for the team’s post-campaign review.</p></div></div>
   </div>
 </section>
 <style>
@@ -485,14 +453,13 @@ html{scroll-behavior:smooth}
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">03 — Selected Work / Topic Framework</span>
-      <h2>Two lines, two audiences, four topic sets</h2>
-      <p>Branded-search topics are for people already looking for the product. Outer topics are for the conversation the product wants to enter. Writing them as separate sets meant the same campaign could be both found and discovered.</p>
+      <h2>Topic planning across two campaign streams</h2>
     </div>
 
     <div class="matrix">
       <div class="mcol a">
         <div class="mcol-h">
-          <span class="t">Product line</span>
+          <span class="t">Product stream</span>
           <span class="k">Awareness</span>
         </div>
         <div class="mrow">
@@ -500,35 +467,39 @@ html{scroll-behavior:smooth}
           <div class="theme-row">智能好用 首选夸克扫描王</div>
         </div>
         <div class="mrow">
-          <div class="lbl">Branded search · 商搜</div>
+          <div class="lbl">Branded Search</div>
+          <div class="topic-status">Used in campaign</div>
           <div class="chosen">#夸克扫描王惊喜到我了#</div>
+          <div class="topic-status alternatives-label">Alternative ideas</div>
           <div class="alts">
-            <span class="alt">#夸克扫描王解决你的问号#</span>
-            <span class="alt">#我的万能工作搭子夸克扫描王#</span>
-            <span class="alt">#夸克扫描王就是行#</span>
-            <span class="alt">#夸克扫描王没有那么多为什么#</span>
-            <span class="alt">#夸克扫描王扫描界特种兵#</span>
-            <span class="alt">#夸克扫描王扫得快准狠#</span>
-          </div>
+<span class="alt">#夸克扫描王解决你的问号#</span>
+<span class="alt">#我的万能工作搭子夸克扫描王#</span>
+<span class="alt">#夸克扫描王就是行#</span>
+</div>
+<details class="topic-more"><summary>More alternative ideas</summary><div class="alts"><span class="alt">#夸克扫描王没有那么多为什么#</span>
+<span class="alt">#夸克扫描王扫描界特种兵#</span>
+<span class="alt">#夸克扫描王扫得快准狠#</span></div></details>
         </div>
         <div class="mrow">
-          <div class="lbl">Outer conversation · 外围</div>
+          <div class="lbl">Broader Conversation</div>
+          <div class="topic-status">Used in campaign</div>
           <div class="chosen">#是时候换个新扫描了#</div>
+          <div class="topic-status alternatives-label">Alternative ideas</div>
           <div class="alts">
-            <span class="alt">#扫描工具已经进化到这种程度了吗#</span>
-            <span class="alt">#你用过最智能的扫描工具是什么#</span>
-            <span class="alt">#我的必备宝藏扫描工具#</span>
-            <span class="alt">#新的智能扫描工具能有多全能#</span>
-            <span class="alt">#不懂就问现在的扫描工具这么高级了吗#</span>
-            <span class="alt">#扫描工具在手生活没有难题#</span>
-          </div>
+<span class="alt">#扫描工具已经进化到这种程度了吗#</span>
+<span class="alt">#你用过最智能的扫描工具是什么#</span>
+<span class="alt">#我的必备宝藏扫描工具#</span>
+</div>
+<details class="topic-more"><summary>More alternative ideas</summary><div class="alts"><span class="alt">#新的智能扫描工具能有多全能#</span>
+<span class="alt">#不懂就问现在的扫描工具这么高级了吗#</span>
+<span class="alt">#扫描工具在手生活没有难题#</span></div></details>
         </div>
       </div>
 
       <div class="mcol b">
         <div class="mcol-h">
-          <span class="t">Dunhuang line</span>
-          <span class="k">Credibility</span>
+          <span class="t">Dunhuang stream</span>
+          <span class="k">Feature Demonstration</span>
         </div>
         <div class="mrow">
           <div class="lbl">Communication theme</div>
@@ -536,17 +507,21 @@ html{scroll-behavior:smooth}
         </div>
         <div class="mrow">
           <div class="lbl">Main topic</div>
+          <div class="topic-status">Used in campaign</div>
           <div class="chosen">#用夸克扫描王为敦煌上新色#</div>
+          <div class="topic-status alternatives-label">Alternative ideas</div>
           <div class="alts">
-            <span class="alt">#夸克扫描王带你梦回千年敦煌#</span>
-            <span class="alt">#夸克扫描王邀你共赏绝美敦煌#</span>
-            <span class="alt">#夸克扫描王敦煌壁画云展览#</span>
-            <span class="alt">#和夸克扫描王一起走进敦煌#</span>
-          </div>
+<span class="alt">#夸克扫描王带你梦回千年敦煌#</span>
+<span class="alt">#夸克扫描王邀你共赏绝美敦煌#</span>
+<span class="alt">#夸克扫描王敦煌壁画云展览#</span>
+</div>
+<details class="topic-more"><summary>More alternative ideas</summary><div class="alts"><span class="alt">#和夸克扫描王一起走进敦煌#</span></div></details>
         </div>
         <div class="mrow">
-          <div class="lbl">Outer conversation · 外围</div>
+          <div class="lbl">Broader Conversation</div>
+          <div class="topic-status">Used in campaign</div>
           <div class="chosen">#起猛了上班走到敦煌了#</div>
+          <div class="topic-status alternatives-label">Alternative ideas</div>
           <div class="alts">
             <span class="alt">#敦煌画闪现北京地铁站#</span>
           </div>
@@ -555,29 +530,33 @@ html{scroll-behavior:smooth}
     </div>
   </div>
 </section>
+<section class="selected-copy"><div class="wrap"><div class="sec-head"><span class="eyebrow">04 — Selected Work / Social Copy</span><h2>Selected social copy</h2><p>Six published copy examples across the product and Dunhuang campaign streams.</p></div><div class="copy-columns"><div class="copy-stream product"><h3>Product Communication</h3><article class="social-copy-card"><div class="copy-account">Official account · @夸克扫描王APP</div><div class="original-copy" lang="zh-CN">为什么那么多人在用的扫描软件，连公式都识别不了？
+为什么车能自动驾驶，扫个文件还得手动调？
+为什么都21世纪了，还要花大把时间录资料？
+#是时候换个新扫描了# 夸克扫描王APP，用更智能的方式，刷新扫描体验。#夸克扫描王惊喜到我了#</div><p class="copy-purpose">Introduces the campaign through three scanning pain points, leading into the product-upgrade message.</p></article><article class="social-copy-card"><div class="copy-account">KOL · 摸鱼少年顾问问</div><div class="original-copy" lang="zh-CN">#是时候换个新扫描了# 真是毫不夸张，打工人狠狠带入了自己！！以前遇到纸质材料整理成文档，表格录入重新修改数据的情况，我只能费时费力地敲键盘码字，主打一个搬运、疯狂输入！现在有@夸克扫描王APP，文件处理方式更智能方便了，表格扫描直接提取转Excel，解放双手，从我做起！！#夸克扫描王惊喜到我了#</div><p class="copy-purpose">Connects spreadsheet extraction with the everyday frustration of manual data entry.</p></article><article class="social-copy-card"><div class="copy-account">KOL · 内娱探长</div><div class="original-copy" lang="zh-CN">#是时候换个新扫描了# #夸克扫描王惊喜到我了# 黄子弘凡同款？那我必须要get啊~满满的心意当然要随身携带！像拍立得啊、手写信件啊、手账啊等等等，直接用夸克扫描王扫描存进手机里，不用担心角度和光线，咔咔一顿扫就完事儿！这样不仅可以在想看的时候随时翻看，更能防丢失有效保存，怎么留存心意你是懂的~</div><p class="copy-purpose">Links scanning and digital storage to fans’ desire to preserve meaningful keepsakes.</p></article></div><div class="copy-stream dunhuang"><h3>Dunhuang Partnership</h3><article class="social-copy-card"><div class="copy-account">KOL · @北京时尚生活资讯</div><div class="original-copy" lang="zh-CN">敦煌与北京、古与今、柔与刚的碰撞，在同一个时空里相遇。@夸克扫描王APP 和@敦煌艺术馆 来北京地铁10号线国贸站办敦煌画作扫描展啦 #起猛了上班走到敦煌了# 上班途中穿过国贸地铁站，在繁忙的赶路中短暂慢下来，感受古人轻逸的思绪。活动现场还有免费敦煌线稿画卡派发，夸克扫描王把多幅精美敦煌画作线稿提取出来做成画卡，大家可以在画卡上发挥想象涂上自己喜欢的颜色，创作自己心里不一样的敦煌～#用夸克扫描王为敦煌上新色# 不在北京的朋友，可以上夸克扫描王APP，搜【敦煌展】看更多敦煌美画！</div><p class="copy-purpose">Connects the cultural installation with the commuting experience and invites both offline and online participation.</p></article><article class="social-copy-card"><div class="copy-account">KOL · @生活创意少年</div><div class="original-copy" lang="zh-CN">京绣作为燕京八绝之一，雅洁精细、逼真精巧，而线条作为京绣中的重要元素，具有极强的张力与表现力。本次夸克扫描王APP与敦煌艺术馆梦幻联动开设敦煌画作扫描展，提取出的画作线稿为京绣艺术家提供别样灵感——京绣与敦煌画作的线条交织碰撞，古韵十足的敦煌画作更加活灵活现，不得不说京绣老师参照敦煌画作线稿绣出的作品尊都吼吼看！大家可以上夸克扫描王APP,搜“敦煌展”看更多各界老师的创作，也可以一起参与进线稿涂色二创活动来哦，有机会get敦煌联名限量周边呢！#起猛了上班走到敦煌了# #用夸克扫描王为敦煌上新色#</div><p class="copy-purpose">Uses linework as the connection between scanning technology, Dunhuang art and Jing embroidery.</p></article><article class="social-copy-card"><div class="copy-account">KOL · @这广子很走心</div><div class="original-copy" lang="zh-CN">尊嘟假嘟？夸克扫描王APP跟敦煌艺术馆联名啦？！不得不说夸克扫描王真的是扫描界的学霸！不仅可以自动裁剪矫正，还能去除杂色，扫描出来的画面色彩更加还原~以前没发现它还可以一键提取线稿？！这样我也可以用敦煌画作线稿涂色创作，当敦煌画师啦！现在上夸克扫描王APP“敦煌展”就能足不出户欣赏经典敦煌画作啦！张张美轮美奂，幅幅精彩绝伦，是一整个大饱眼福的节奏哇~还能提取保存敦煌壁画线稿，看众多艺术大神的二创，充满艺术细胞的你不得也撸起袖子大肆创作一番？还有机会赢取限量敦煌联名周边哦！#用夸克扫描王为敦煌上新色# #起猛了上班走到敦煌了#</div><p class="copy-purpose">Turns line-art extraction into an invitation to create and participate in the campaign.</p></article></div></div></div></section>
 <section>
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">04 — Selected Work / Product Graphics</span>
-      <h2>The graphics I designed for the product line</h2>
-      <p>Annotated app screenshots with overlay copy — the format that lets a feature explain itself in one glance. Two of the series.</p>
+      <span class="eyebrow">05 — Selected Work / Product Graphics</span>
+      <h2>Product feature graphics</h2>
+      <p>Created six social graphics around everyday user needs and pain points, combining app screenshots with feature-led copy. Two examples are shown below.</p>
     </div>
 
     <div class="gallery two">
       <div class="shot">
-        <div class="shot-img"><img src="assets/quark-1.jpg" alt="Product graphic showing classroom scanning and editing"></div>
+        <div class="shot-img"><a href="assets/quark-1.jpg" target="_blank" rel="noopener" aria-label="Open full-size campaign graphic"><img src="assets/quark-1.jpg" alt="Product graphic showing classroom scanning and editing" width="1000" height="1107" loading="lazy" decoding="async"></a></div>
         <div class="shot-body">
           <span class="tag">Study scenario</span>
           <div class="copy-line">「跟上课堂节奏，轻轻松松！」</div>
-          <p class="desc">Capture-to-output in one frame: the yellow callout points at the feature, the overlay line carries the benefit. Built for the student audience.</p>
+          <p class="desc">Shows how scanning and editing can help students capture classroom materials and keep up with lessons.</p>
         </div>
       </div>
       <div class="shot">
-        <div class="shot-img"><img src="assets/quark-3.jpg" alt="Product graphic showing a printed grade sheet converted to an editable spreadsheet"></div>
+        <div class="shot-img"><a href="assets/quark-3.jpg" target="_blank" rel="noopener" aria-label="Open full-size campaign graphic"><img src="assets/quark-3.jpg" alt="Product graphic showing a printed grade sheet converted to an editable spreadsheet" width="1000" height="1121" loading="lazy" decoding="async"></a></div>
         <div class="shot-body">
           <span class="tag">Table conversion</span>
           <div class="copy-line">「表格再也不用手动录入，太棒啦 &gt;.&lt;」</div>
-          <p class="desc">A printed grade sheet captured and converted into an editable spreadsheet, shown side by side so the result is visible without reading a feature list.</p>
+          <p class="desc">Shows a printed grade sheet converted into an editable spreadsheet to reduce manual data entry.</p>
         </div>
       </div>
     </div>
@@ -587,95 +566,118 @@ html{scroll-behavior:smooth}
 <section>
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">05 — Selected Work / Dunhuang KOC Materials</span>
-      <h2>Proving a feature with a cultural partnership</h2>
-      <p>Materials produced across five functional angles — exhibition, line-art extraction, HD scanning, remix and subway. Three of them below.</p>
+      <span class="eyebrow">06 — Selected Work / Dunhuang KOC Materials</span>
+      <h2>Dunhuang KOC copy &amp; visuals</h2>
+      <p>Created copy and image materials across five angles: the exhibition, line-art extraction, HD scanning, creative reinterpretation and the subway installation. Three examples are shown below.</p>
     </div>
 
     <div class="gallery">
       <div class="shot">
-        <div class="shot-img"><img src="assets/dunhuang-1.jpg" alt="In-app Dunhuang exhibition page"></div>
+        <div class="shot-img"><a href="assets/dunhuang-1.jpg" target="_blank" rel="noopener" aria-label="Open full-size campaign graphic"><img src="assets/dunhuang-1.jpg" alt="In-app Dunhuang exhibition page" width="652" height="1412" loading="lazy" decoding="async"></a></div>
         <div class="shot-body">
           <span class="tag">Exhibition angle</span>
           <div class="copy-line">「我为敦煌上新色」</div>
-          <p class="desc">The in-app exhibition page — mural, story panel, and the single action the campaign wanted: extract the line art and re-colour it.</p>
+          <p class="desc">Introduces the in-app Dunhuang exhibition and the option to extract and recolour mural line art.</p>
         </div>
       </div>
       <div class="shot">
-        <div class="shot-img"><img src="assets/dunhuang-2.jpg" alt="Line-art extraction demonstrated with a Dunhuang mural"></div>
+        <div class="shot-img"><a href="assets/dunhuang-2.jpg" target="_blank" rel="noopener" aria-label="Open full-size campaign graphic"><img src="assets/dunhuang-2.jpg" alt="Line-art extraction demonstrated with a Dunhuang mural" width="720" height="720" loading="lazy" decoding="async"></a></div>
         <div class="shot-body">
           <span class="tag">Line-art extraction</span>
           <div class="copy-line">「一键提取线稿好方便！」</div>
-          <p class="desc">The product's hardest feature in one image: coloured mural in, clean line art out. This is what a demo cannot do and a physical exhibition can.</p>
+          <p class="desc">Demonstrates line-art extraction by showing a Dunhuang mural alongside its extracted outline.</p>
         </div>
       </div>
       <div class="shot">
-        <div class="shot-img"><img src="assets/dunhuang-3.jpg" alt="Printed line-art card coloured in by a user"></div>
+        <div class="shot-img"><a href="assets/dunhuang-3.jpg" target="_blank" rel="noopener" aria-label="Open full-size campaign graphic"><img src="assets/dunhuang-3.jpg" alt="Colouring example prepared for Dunhuang campaign materials" width="652" height="869" loading="lazy" decoding="async"></a></div>
         <div class="shot-body">
-          <span class="tag">Remix angle</span>
+          <span class="tag">Creative reinterpretation</span>
           <div class="copy-line">「我和妹妹一起画滴~」</div>
-          <p class="desc">The printed line-art card after a real visitor coloured it — closing the loop from subway poster to app activity to something on a family's table.</p>
+          <p class="desc">Shows a colouring example created from extracted line art to illustrate creative reinterpretation.</p>
         </div>
       </div>
     </div>
 
-    <div class="gal-cap">
-      <b>Why this line existed:</b> the product line could claim intelligence, but only the Dunhuang line let people verify it. Visitors scanned a real mural, watched the line art come out clean, and took the output home to use — which is a harder proof than any claim in a poster.
-    </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
     <div class="results">
-      <span class="eyebrow">06 — Results</span>
-      <div class="big">110M+ Weibo reads at an overall CPM of 2.7.</div>
-      <p>Both lines ran off one budget and were measured in a single review, which meant the product line and the cultural partnership could be read against each other rather than separately.</p>
-      <p class="fine">Reported results reflect the performance data available to the agency.</p>
+      <span class="eyebrow">07 — Results</span>
+      <div class="big">Campaign performance</div>
+      <p>Campaign results reported in the team’s post-campaign review; these reflect the wider campaign rather than my individual output.</p>
+      <p class="fine">Topic figures overlap: broader-conversation activity is included in the branded campaign figures. These metrics should not be added together.</p>
     </div>
 
     <table class="rtable">
       <tr><th>Metric</th><th>Result</th></tr>
-      <tr><td>Total reads</td><td class="v">110M+</td></tr>
-      <tr><td>Total discussions</td><td class="v">172,000+</td></tr>
-      <tr><td>Overall CPM</td><td class="v">2.7</td></tr>
-      <tr><td>Branded topic #夸克扫描王惊喜到我了#</td><td class="v">110M+ views · 46,000+ discussions</td></tr>
-      <tr><td>Outer topic #是时候换个新扫描了#</td><td class="v">66.8M+ views · 82,000+ discussions</td></tr>
-      <tr><td>KOL total</td><td class="v">48.7M+ reads · 288,000+ engagements · CPM 9</td></tr>
+      <tr><td>Campaign-wide Weibo reads</td><td class="v">110M+</td></tr>
+      <tr><td>Campaign-wide Weibo discussions</td><td class="v">172,000+</td></tr>
+      <tr><td>Branded topic #夸克扫描王惊喜到我了#</td><td class="v">110M+ reads · 46,000+ discussions</td></tr>
+      <tr><td>Broader conversation topic #是时候换个新扫描了#</td><td class="v">66.8M+ reads · 82,000+ discussions</td></tr>
+      <tr><td>Weibo KOL content</td><td class="v">48.7M+ reads · 288,000+ engagements</td></tr>
     </table>
 
-    <div class="footnote">
-      <b>Where the budget worked hardest:</b> the compiled data showed marketing KOLs delivering at a CPM of 4.7 against CPM 27 for original content — an efficiency gap the review used to rebalance the next flight's mix.
-    </div>
   </div>
 </section>
 
 <footer class="footer">
-  <div class="wrap">
-    <div class="demo-note">
-      <strong>On the sources.</strong> Graphics and KOC materials shown are the campaign assets I produced at Shengu Media. Page copy is taken from the original campaign documents. No budgets, supplier pricing or internal commercial terms are reproduced.
-    </div>
+  <div class="wrap case-navigation">
+    <a href="index.html#work">← Back to selected work</a>
+    <a href="juhuasuan-case.html">Next project: Juhuasuan →</a>
   </div>
 </footer>
 
 <script>
 (function(){
-  var sel = '.resp-item, .line-card, .mcol, .shot, .results, .brief-facts, .gal-cap, .footnote, .rtable';
-  var targets = document.querySelectorAll(sel);
-  if(!('IntersectionObserver' in window)) return;
-  for(var i=0;i<targets.length;i++){
-    targets[i].style.opacity = '0';
-    targets[i].style.transform = 'translateY(14px)';
-    targets[i].style.transition = 'opacity .5s ease, transform .5s ease';
+  var selector = '.social-copy-card, .resp-item, .line-card, .mcol, .shot, .results, .rtable';
+  var candidates = Array.prototype.slice.call(document.querySelectorAll(selector));
+  var targets = candidates.filter(function(el){
+    return !candidates.some(function(parent){ return parent !== el && parent.contains(el); });
+  });
+  if(!('IntersectionObserver' in window) || !targets.length) return;
+  var motion = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+  var observer;
+  function show(el){ el.style.opacity = '1'; el.style.transform = 'none'; }
+  function showAll(){
+    if(observer) observer.disconnect();
+    targets.forEach(function(el){ el.style.transition = 'none'; show(el); });
   }
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){ e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; io.unobserve(e.target); }
+  if(motion && motion.matches){ showAll(); return; }
+  try{
+    observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ show(entry.target); observer.unobserve(entry.target); }
+      });
+    }, { threshold:0, rootMargin:'0px 0px -30px 0px' });
+    targets.forEach(function(el){
+      var rect = el.getBoundingClientRect();
+      if(rect.top < window.innerHeight - 30){ show(el); return; }
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(14px)';
+      el.style.transition = 'opacity .5s ease, transform .5s ease';
+      observer.observe(el);
     });
-  },{threshold:.06, rootMargin:'0px 0px -30px 0px'});
-  for(var j=0;j<targets.length;j++){ io.observe(targets[j]); }
+    if(motion){
+      var onChange = function(event){ if(event.matches) showAll(); };
+      if(motion.addEventListener) motion.addEventListener('change', onChange);
+      else if(motion.addListener) motion.addListener(onChange);
+    }
+    window.addEventListener('beforeprint', showAll);
+  }catch(error){ showAll(); }
 })();
 </script>
 <script>(function(){var e=document.getElementById("sp");if(!e)return;function u(){var h=document.documentElement.scrollHeight-window.innerHeight;e.style.width=(h>0?(window.pageYOffset/h)*100:0)+"%";}window.addEventListener("scroll",u,{passive:true});window.addEventListener("resize",u);u();})();</script>
-</body>
+<style id="quark-final-overrides">
+.footer{background:transparent;border-top:1px solid var(--line)}
+.results .fine{color:rgba(255,255,255,.76)}
+.topic-more{margin-top:12px}
+.topic-more summary{font-size:12px;color:var(--muted);cursor:pointer;width:fit-content}
+.topic-more summary:hover{color:var(--ink)}
+.topic-more summary:focus-visible{outline:3px solid #D6A84B;outline-offset:4px}
+.topic-more[open] .alts{margin-top:10px}
+@media print{.topic-more .alts{display:flex}.topic-more summary{display:none}}
+</style>
+<script src="assets/work-navigation.js"></script></body>
 </html>

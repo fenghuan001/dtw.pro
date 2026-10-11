@@ -4,22 +4,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Taobao Live × Tmall — 上播大明星 Double 11 Campaign</title>
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<meta name="description" content="Fan-community content for 30+ celebrity livestreams at scale. Case 05 — Du Tingwei, Anna.">
 <link rel="canonical" href="https://fenghuan001.github.io/dtw.pro/taobao-live-case.html">
 <meta property="og:url" content="https://fenghuan001.github.io/dtw.pro/taobao-live-case.html">
+<meta property="og:image" content="https://fenghuan001.github.io/dtw.pro/assets/og-card.jpg">
+<meta name="twitter:image" content="https://fenghuan001.github.io/dtw.pro/assets/og-card.jpg">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta name="description" content="Fan-community content for 30+ celebrity livestreams at scale. Case 05 — Du Tingwei, Anna.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Du Tingwei, Anna">
 <meta property="og:title" content="Taobao Live x Tmall — Shangbo Damingxing, Double 11 Campaign">
 <meta property="og:description" content="Fan-community content for 30+ celebrity livestreams at scale. Case 05 — Du Tingwei, Anna.">
-<meta property="og:image" content="https://fenghuan001.github.io/dtw.pro/assets/og-card.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Du Tingwei, Anna — Account Executive, Integrated Marketing and Content Strategy">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Taobao Live x Tmall — Shangbo Damingxing, Double 11 Campaign">
 <meta name="twitter:description" content="Fan-community content for 30+ celebrity livestreams at scale. Case 05 — Du Tingwei, Anna.">
-<meta name="twitter:image" content="https://fenghuan001.github.io/dtw.pro/assets/og-card.jpg">
 <meta name="theme-color" content="#0A2E29">
 
 <style>
@@ -171,7 +171,7 @@ table.mx td b{color:var(--ink);font-weight:700}
 .beat .tc{font-family:var(--font-display);font-size:15px;color:var(--pine-key);line-height:1.5}
 .beat .bc b{display:block;font-size:13px;color:#fff;margin-bottom:5px;font-weight:700}
 .beat .bc span{font-size:13px;color:rgba(255,255,255,.66);line-height:1.65;display:block}
-.beat .bc em{font-style:normal;color:#9BD1A0}
+.beat .bc em{font-style:normal;color:inherit}
 @media(max-width:640px){ .beat{grid-template-columns:1fr;gap:6px} }
 
 /* ---------- ACTIVATION LADDER ---------- */
@@ -237,7 +237,7 @@ table.mx td b{color:var(--ink);font-weight:700}
   .mine{border-top-color:#ddd !important}
 }
 </style>
-</head>
+<style>body{--muted:#62666E}a:focus-visible,button:focus-visible{outline:3px solid #D6A84B;outline-offset:5px}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation:none!important;transition:none!important}}</style><link rel="stylesheet" href="assets/work-navigation.css"><style>img{height:auto}</style></head>
 <body>
 <div id="sp" aria-hidden="true"></div>
 <style id="plcss">
@@ -304,19 +304,20 @@ table.mx td b{color:var(--ink);font-weight:700}
     if(reduce.matches) rest(); else frame = requestAnimationFrame(tick);
   }
   function done(){
+    if(ready) return;
     ready = true;
     if(!shown){ loader.style.display = 'none'; document.body.setAttribute('aria-busy','false'); return; }
-    // let the star finish the orbit it is currently on, rather than cutting it off
-    var el = performance.now() - showAt;
-    finishAt = showAt + Math.max(1, Math.ceil(el / ORBIT)) * ORBIT;
+    finishAt = performance.now();
     if(reduce.matches) hide(); else frame = requestAnimationFrame(tick);
   }
   window.finishLogoLoading = done;
 
   // only appear when the page is actually slow
   setTimeout(function(){ if(!ready) show(); }, GRACE);
-  if(document.readyState === 'complete') done();
-  else window.addEventListener('load', done, { once:true });
+  // Release the overlay when readable HTML is ready, independently of images.
+  setTimeout(done, 2000);
+  if(document.readyState !== 'loading') done();
+  else document.addEventListener('DOMContentLoaded', done, { once:true });
   document.addEventListener('visibilitychange', function(){ if(!document.hidden && shown && ready) hide(); });
 })();
 </script>
@@ -347,9 +348,9 @@ html{scroll-behavior:smooth}
   <div class="in">
     <a class="brand" href="index.html" aria-label="Back to the portfolio home"><svg class="mark" viewBox="0 0 1254 1254" fill="currentColor" aria-hidden="true" focusable="false"><defs><clipPath id="tbm-l"><rect x="345" y="760" width="151" height="150"/></clipPath><clipPath id="tbm-r"><rect x="750" y="600" width="240" height="270"/></clipPath><mask id="tbm-o" maskUnits="userSpaceOnUse" x="0" y="0" width="1254" height="1254" style="mask-type:luminance"><rect width="1254" height="1254" fill="white"/><path clip-path="url(#tbm-l)" d="M 351 815 C 544 817 864 743 1027 616" fill="none" stroke="black" stroke-width="36"/><path clip-path="url(#tbm-r)" d="M 351 883 C 577 888 912 773 1058 630" fill="none" stroke="black" stroke-width="36"/></mask></defs><path mask="url(#tbm-o)" fill-rule="evenodd" d="M 252 325 L 578 325 C 808 325 950 444 956 650 C 961 854 832 978 590 978 L 249 978 L 249 971 C 327 957 354 938 354 869 L 354 423 C 354 362 330 341 252 333 Z M 487 398 L 487 891 C 487 936 508 952 575 952 C 717 952 803 857 803 652 C 803 450 717 347 579 347 L 528 347 C 497 347 487 362 487 398 Z"/><path d="M 341 644 C 236 683 132 735 129 786 C 123 849 218 881 351 883 C 577 888 912 773 1058 630 C 1088 599 1099 566 1101 538 C 1083 569 1058 591 1027 616 C 864 743 544 817 351 815 C 244 814 183 806 178 782 C 171 752 244 694 336 651 Q 342 648 341 644 Z"/><path d="M 1117 403 C 1109 458 1099 469 1045 478 C 1098 485 1109 498 1117 551 C 1125 498 1136 486 1190 479 C 1136 471 1126 458 1117 403 Z"/></svg></a>
     <nav class="nav" aria-label="Main">
-      <a href="index.html#work">Selected Work</a>
+      <div class="work-dropdown"><a href="index.html#work">Selected Work</a><button class="work-toggle" type="button" aria-label="Show selected projects" aria-expanded="false" aria-controls="work-projects"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="m2 4 4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></button><div class="work-projects" id="work-projects" hidden><a href="haidilao-case.html">Haidilao</a><a href="quark-scan-king-case.html">Quark Scan King</a><a href="juhuasuan-case.html">Juhuasuan</a><a href="eleme-lichun-case.html">Ele.me</a><a href="taobao-live-case.html" aria-current="page">Taobao Live</a></div></div>
       <a href="pitch-experience.html">Pitch</a>
-      <a href="anna-du-cv.pdf" download>CV</a>
+      <a href="resume.html">Resume</a>
       <a href="index.html#contact">Contact</a>
     </nav>
   </div>
@@ -382,12 +383,12 @@ html{scroll-behavior:smooth}
       <span class="eyebrow" style="color:var(--muted)">Celebrity Livestream Event</span>
     </div>
     <h1>Taobao Live × Tmall — 上播大明星</h1>
-    <p class="sub">Double 11 · Fan community activation at scale</p>
+    <p class="sub">Double 11 · Fan Community Campaign</p><p class="hero-summary">Wrote fan-community copy for 30+ artists, created supporting social graphics, and developed complete livestream highlight scripts using footage selection, narration and timecodes.</p>
     <dl class="meta">
       <div><dt>Client</dt><dd>Taobao Live × Tmall<br>(Alibaba Group)</dd></div>
       <div><dt>Timeline</dt><dd>October – November 2023</dd></div>
-      <div><dt>My Role</dt><dd>Account Executive<br>Shengu Media</dd></div>
-      <div><dt>Scope</dt><dd>Community copy · Scripts ·<br>Design · Settlement</dd></div>
+      <div><dt>My Role</dt><dd>Account Executive<br>Beijing Shiny Gold</dd></div>
+      <div><dt>Scope</dt><dd>Community Copy · Highlight Scripts ·<br>Social Graphics · Settlement Support</dd></div>
     </dl>
     <div class="result-strip">
       <span class="num">30+</span>
@@ -400,15 +401,10 @@ html{scroll-behavior:smooth}
   <div class="wrap">
     <div class="out-band">
       <div class="out-head">
-        <span class="eyebrow">What I produced</span>
+        <span class="eyebrow">Selected deliverables &amp; campaign scope</span>
         <span class="hint">The scale of my own output on this campaign</span>
       </div>
-      <div class="out-grid">
-        <div class="out"><b>436</b><span>community copy variants in a single working document</span></div>
-        <div class="out"><b>62</b><span>variants written for one artist's fan groups — the largest set I hold</span></div>
-        <div class="out"><b>~20</b><span>dedicated fan groups per artist in the roster</span></div>
-        <div class="out"><b>30+</b><span>celebrity livestreams the workflow served</span></div>
-      </div>
+      <div class="out-grid"><div class="out"><b>205</b><span>community copy variants in the retained working document</span></div><div class="out"><b>231</b><span>Weibo campaign comment copy entries</span></div><div class="out"><b>436</b><span>total copy entries across both formats</span></div><div class="out"><b>30+</b><span>artists supported with fan-community copy</span></div></div>
       <div class="out-scope">
         <span class="sl">Across</span>
         <span class="sc">Fan community marketing</span>
@@ -422,200 +418,60 @@ html{scroll-behavior:smooth}
         <span class="sc">Fan behaviour insight</span>
         <span class="sc">Cross-team coordination</span>
       </div>
-      <p class="source-note">Counts are taken from the working documents I still hold: 436 community variants across three artist groups and the platform-wide 天猫双11 set (20 / 62 / 61 / 62), plus 231 Weibo comment-section posts for one artist. Fan-group counts per artist come from the campaign plan.</p>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">01 — The Brief</span>
-      <h2>Thirty livestreams, thirty fan communities</h2>
-      <p>Background only. Everything from "My Contribution" onwards is my own output.</p>
-    </div>
-
-    <div class="brief">
-      <div>
-        <p class="lede">For Double 11, Taobao Live's <strong>上播大明星</strong> IP placed celebrities into brand livestreams across the promotional period, each carrying a co-branded <strong>星动礼盒</strong> gift box and its own "11"-themed challenge.</p>
-        <p style="font-size:14.5px;color:var(--muted)">The campaign ran on two tracks at once: fan communities collecting and trading the gift boxes, and a B-side credibility play — a celebrity value ranking published with <strong>DT商业观察</strong> to build the IP's standing with brands.</p>
-        <div class="chal">
-          <div><b>To C — fan engagement</b>Three escalating layers of fan participation: collect the box, open it publicly, then customise it.</div>
-          <div><b>To B — brand influence</b>A trade-facing ranking across influence, sales pull and content performance, issued under a third-party name.</div>
-        </div>
-        <p style="font-size:13px;color:var(--muted);margin-top:22px">Each artist was given an "11" challenge so the same campaign mechanic read differently in every community — <span class="mech">王鹤棣空气投篮11投11中</span>, <span class="mech">虞书欣一场直播被夸了11次</span>, <span class="mech">檀健次11秒拿捏美拉德风格香</span>, <span class="mech">赵露思11句土味情话</span>.</p>
-      </div>
-      <div class="brief-facts">
-        <dl>
-          <div><dt>Format</dt><dd>Celebrity × brand livestreams, with a co-branded gift box per artist</dd></div>
-          <div><dt>Two audiences</dt><dd>Fan communities (participation) and brand marketers (credibility)</dd></div>
-          <div><dt>Timing</dt><dd>Pre-sale warm-up 20–23 Oct · Pre-sale 25–29 Oct · Early-bird 4–9 Nov · Category &amp; finale days 12–14 Nov</dd></div>
-          <div><dt>The problem</dt><dd>Volume. 30 artists, each needing community copy, gift-box graphics and cut videos — in parallel, by a small team</dd></div>
-        </dl>
-      </div>
-    </div>
-  </div>
-</section>
+<section><div class="wrap"><div class="sec-head"><span class="eyebrow">01 — Background</span><p class="background-copy">Taobao Live’s Double 11 “上播大明星” campaign brought celebrities into brand livestreams, supported by co-branded gift boxes and fan-community content. My team supported a roster of 30+ artists, creating content to promote livestreams and sustain fan participation.</p></div></div></section>
 <section>
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">02 — My Contribution</span>
-      <h2>Six workstreams, four owned end to end</h2>
+      <h2>My contribution to the livestream campaign</h2>
     </div>
     <div class="resp">
       <div class="resp-item solo">
-        <span class="badge">Solo</span>
+        <span class="badge">Independent deliverable</span>
         <h4>Fan community copy &amp; assets</h4>
-        <p>Wrote the community copy and produced the accompanying assets for the artist roster — dedicated sets per artist and per fan group, so the same announcement read naturally in each community.</p>
+        <p>Wrote fan-community copy for 30+ artists and created celebrity community graphics, adapting announcements to each artist’s audience.</p>
       </div>
       <div class="resp-item solo">
-        <span class="badge">Solo</span>
+        <span class="badge">Independent deliverable</span>
         <h4>Highlight cut scripts</h4>
-        <p>Wrote the livestream highlight scripts that turned each artist's footage into short fan-facing videos — timed to the second against the live stream.</p>
+        <p>Wrote complete livestream highlight scripts, selecting footage and providing narration, timecodes and editing directions for the company’s editing department.</p>
       </div>
       <div class="resp-item solo">
-        <span class="badge">Solo</span>
-        <h4>Official campaign PR article</h4>
-        <p>Wrote the campaign article published on Taobao Live's official WeChat account after the Double 11 period.</p>
-      </div>
-      <div class="resp-item solo">
-        <span class="badge">Solo</span>
-        <h4>Settlement reconciliation</h4>
-        <p>Ran the project's settlement between agency, client and vendors after the campaign closed.</p>
+        <span class="badge">Independent deliverable</span>
+        <h4>AI-assisted Copy Editing</h4>
+        <p>Used AI to assist with first drafts, then edited the copy for factual accuracy, fan-community tone and campaign messaging.</p>
       </div>
       <div class="resp-item contrib">
-        <span class="badge">Contributed</span>
+        <span class="badge">Team contribution</span>
+        <h4>Settlement Support</h4>
+        <p>Assisted with settlement checks for topic marketing and framed display materials after the campaign.</p>
+      </div>
+      <div class="resp-item contrib">
+        <span class="badge">Team contribution</span>
         <h4>Design reference for other assets</h4>
         <p>Produced reference material the design team worked from on the remaining campaign assets.</p>
       </div>
       <div class="resp-item contrib">
-        <span class="badge">Contributed</span>
+        <span class="badge">Team contribution</span>
         <h4>Topic brainstorm</h4>
         <p>Took part in the team brainstorm that built the campaign's trending-topic matrix.</p>
       </div>
     </div>
-    <div class="legend">
-      <span><i class="dot"></i> <strong>Solo</strong> — briefed, written and delivered by me end to end</span>
-      <span><i class="dot d2"></i> <strong>Contributed</strong> — I owned part of the workstream</span>
-    </div>
   </div>
 </section>
 
-<section>
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">03 — My Contribution / The Workflow</span>
-      <h2>Producing personalised copy at scale</h2>
-      <p>This is the part of the campaign worth asking about. Thirty artists, roughly twenty fan groups each, three weeks — and a fan group can tell within one line whether the copy was written for them.</p>
-    </div>
-
-    <div class="flow">
-      <div class="stage">
-        <div class="sno">Stage 01</div>
-        <div class="big2">30 × ~20</div>
-        <h4>Map the audience</h4>
-        <p>Thirty artists, each with its own cluster of fan groups — and each group with its own register. The roster was mapped first: who the copy was for, what they already knew, and what they would post back.</p>
-      </div>
-      <div class="arrow">→</div>
-      <div class="stage hot">
-        <div class="sno">Stage 02</div>
-        <div class="big2">436 lines</div>
-        <h4>Batch-generate</h4>
-        <p>First drafts produced at volume, seeded with each artist's fixed facts — livestream date and time, brand, gift-box contents and challenge title — so nothing had to be looked up twice.</p>
-      </div>
-      <div class="arrow">→</div>
-      <div class="stage">
-        <div class="sno">Stage 03</div>
-        <div class="big2">100% read</div>
-        <h4>Edit and tone-check</h4>
-        <p>Every line read, rewritten or approved before release. The generated draft was the starting point, never the deliverable — accuracy, tone and brand-safety were all mine to carry.</p>
-      </div>
-    </div>
-
-    <div class="pull">
-      <p>AI produced the volume. I produced the judgement. Nothing went out without a human read.</p>
-      <div class="att">The working rule that made a single writer viable on a thirty-artist roster.</div>
-    </div>
-
-    <div class="why">
-      <div><b>Why volume was the problem</b><p>Three artists' fan-group sets plus the platform-wide set came to 436 lines in one document — and that was a fraction of the roster.</p></div>
-      <div><b>Why it had to be parallel</b><p>Thirty livestreams ran inside a three-week window. There was no sequence to write them in; they all had to exist at once.</p></div>
-      <div><b>Why tone is the whole job</b><p>A fan community reads generic brand copy as spam. The same announcement had to sound like it was written by someone inside that group.</p></div>
-    </div>
-
-    <div class="matrix">
-      <div class="mx-head">
-        <h4>The copy sets I still hold</h4>
-        <span>Working document · community + comment copy</span>
-      </div>
-      <table class="mx">
-        <thead>
-          <tr><th>Audience set</th><th>Channel</th><th>Variants</th><th>Tone register</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><b>赵露思</b> fan groups</td><td>Community direct post</td><td><b>20</b></td><td><span class="tone">Sweet, close-friend, self-deprecating</span></td></tr>
-          <tr><td><b>成毅</b> fan groups</td><td>Community direct post</td><td><b>62</b></td><td><span class="tone">Rallying, countdown, then story-led</span></td></tr>
-          <tr><td><b>王鹤棣</b> fan groups</td><td>Community direct post</td><td><b>61</b></td><td><span class="tone">Fandom in-jokes, hype, nickname-led</span></td></tr>
-          <tr><td><b>天猫双11</b> platform set</td><td>Community direct post</td><td><b>62</b></td><td><span class="tone">Platform voice — benefit-led, no fandom register</span></td></tr>
-          <tr><td><b>赵露思</b> comment UGC</td><td>Weibo comment section</td><td><b>231</b></td><td><span class="tone">First-person unboxing and hand-over stories</span></td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">04 — Campaign Context / Announcement System</span>
-      <h2>The announcement system the campaign ran on</h2>
-      <p>Every artist on the roster got a co-branded poster — 天猫双11 × 淘宝直播 × brand, with the artist's own "11" challenge and livestream slot. <strong>This artwork and the grid were produced and supplied by the client.</strong> It is shown here as the context my part of the campaign sat inside, not as my design.</p>
-    </div>
-
-    <div class="figure">
-      <img src="assets/taobao-grid-row.jpg" alt="Six co-branded livestream announcement posters from the Taobao Live Double 11 campaign">
-      <div class="cap"><b>The poster system.</b> Every announcement carried the same four elements: the co-branded lock-up, the artist's "11" challenge, the brand and ambassador title, and the livestream date and slot. Consistency across thirty artists is what let one sheet carry the whole roster.</div>
-    </div>
-
-    <div class="grid-duo" style="margin-top:22px">
-      <div class="sheet">
-        <img src="assets/taobao-grid.jpg" alt="The full 30-artist announcement grid">
-      </div>
-      <div>
-        <h3 style="margin-bottom:12px">The full roster sheet</h3>
-        <p style="font-size:14px;color:var(--muted)">All thirty posters, assembled into one grid — the version released and re-shared by fan accounts as a single image. It worked as a scale statement as much as an announcement: one look told you how large the roster was.</p>
-        <p style="font-size:14px;color:var(--muted)">It appears on this page as context rather than as my work. My part of this campaign was the community copy and the highlight scripts written alongside this system.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
+<section><div class="wrap"><div class="sec-head"><span class="eyebrow">03 — My Contribution / AI-assisted Workflow</span><h2>From first draft to community-ready copy</h2></div><div class="flow"><div class="stage"><div class="sno">01</div><h4>Set the brief</h4><p>Organise artist, brand and livestream information, along with the intended audience and tone.</p></div><div class="arrow">→</div><div class="stage hot"><div class="sno">02</div><h4>AI-assisted drafting</h4><p>Use AI to generate initial copy variations from the campaign information.</p></div><div class="arrow">→</div><div class="stage"><div class="sno">03</div><h4>Human editing</h4><p>Check factual details, refine the wording and adapt the tone before delivery.</p></div></div></div></section>
+<section><div class="wrap"><div class="sec-head"><span class="eyebrow">04 — Campaign Context / Client Artwork</span><h2>Celebrity livestream announcements</h2><p>Client-supplied announcement artwork, shown as context for the community copy and highlight scripts.</p></div><div class="figure"><img src="assets/taobao-grid-row.jpg" alt="Client-supplied celebrity livestream announcement posters" width="1700" height="525" loading="lazy" decoding="async"></div></div></section>
 <section>
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">05 — Selected Work / Fan Community Copy</span>
-      <h2>The same announcement, written for twenty groups</h2>
-      <p>The campaign moved fans through three stages. My job was the copy that carried them from one to the next — in each group's own voice.</p>
-    </div>
-
-    <div class="ladder">
-      <div class="rung">
-        <div class="lvl">01</div>
-        <h4>Collect</h4>
-        <p>A map-style guide to which artists had boxes and where to find them, plus fan-submitted collection posts.</p>
-        <span class="tag">Drives the hunt</span>
-      </div>
-      <div class="rung">
-        <div class="lvl">02</div>
-        <h4>Unbox</h4>
-        <p>Boxes opened publicly — the contents photographed and posted back into the communities.</p>
-        <span class="tag">Turns a box into content</span>
-      </div>
-      <div class="rung">
-        <div class="lvl">03</div>
-        <h4>Customise</h4>
-        <p>Fans reworked the boxes — repainted, re-cut, turned into something else — and posted the result.</p>
-        <span class="tag">Fan output becomes the campaign</span>
-      </div>
+      <h2>Published fan-community and comment copy</h2>
+      <p>Published copy written for fan communities and campaign comment sections, adapting the message to each artist’s audience.</p>
     </div>
 
     <div class="copy-grid" style="margin-top:26px">
@@ -628,7 +484,7 @@ html{scroll-behavior:smooth}
           <p>淘宝直播间的露思太抢眼了，简直是可爱到炸裂！没抢到她的星动礼盒？别急，天猫双11会有更多疯狂优惠，准备好一起尖叫和high翻全场吗？</p>
           <p>哎哟喂！赵露思在qina亓那直播间的模样，简直是萌翻了所有人！错过了她的星动礼盒也不用沮丧，天猫双11有更多火爆福利等你来拿，准备好一起high爆吗？</p>
         </div>
-        <div class="cf"><span><b>20</b> variants</span><span>Close-friend register, no hard sell</span></div>
+        <div class="cf"><span><b>20</b> variants</span><span>Conversational, benefit-led copy</span></div>
       </div>
 
       <div class="copycard">
@@ -646,13 +502,13 @@ html{scroll-behavior:smooth}
       <div class="copycard">
         <div class="ch">
           <div class="who">赵露思 · Weibo comments</div>
-          <div class="what">Comment-section UGC</div>
+          <div class="what">Published campaign comment copy</div>
         </div>
         <div class="cb">
           <p>今天收到露思的专属星动礼盒，太漂亮了！露思的明信片和贴纸都好粉，人形立牌更是元气爆棚！</p>
           <p>妈妈看到我收的露思礼盒，也被露思的可爱打动，说她也想收一个呢！</p>
         </div>
-        <div class="cf"><span><b>231</b> posts</span><span>First-person, written as a fan not a brand</span></div>
+        <div class="cf"><span><b>231</b> copy entries</span><span>Campaign copy written in a fan-facing voice</span></div>
       </div>
     </div>
   </div>
@@ -662,54 +518,13 @@ html{scroll-behavior:smooth}
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">06 — Selected Work / Highlight Cut Script</span>
-      <h2>Editing a livestream down to ninety seconds</h2>
-      <p>I wrote the highlight scripts that turned each artist's livestream into short fan-facing videos. This is the 檀健次 cut — written against the timecodes of his stream.</p>
+      <h2>Livestream highlight script</h2>
+      <p>I wrote the complete Tan Jianci (檀健次) highlight script, including footage selection, narration, overlay suggestions and timecodes. The company’s editing department produced the video.</p>
     </div>
 
     <div class="script">
       <span class="eyebrow">Highlight cut script</span>
-      <h3>檀健次 · the gap between the on-camera pose and the person</h3>
-      <div class="smeta">Voice-over + 表情包 overlays · timecoded to the livestream VOD</div>
-
-      <div class="beat">
-        <div class="tc">19:08<br>19:59</div>
-        <div class="bc">
-          <b>Beat 01 — "表面上的檀健次" · 木质感温润公子</b>
-          <span>Cut a run of slow, composed moments: 闻袖口 · 垂眸 · 歪头 · 闻玻璃瓶香水 · 静坐 · 唱舒缓的歌. Female AI voice under it, playing it completely straight.</span>
-        </div>
-      </div>
-
-      <div class="beat">
-        <div class="tc">20:04</div>
-        <div class="bc">
-          <b>Beat 02 — the turn</b>
-          <span>The signing shot, with his own 20:00 "上播大明星" line laid under it. <em>AI voice: 公子送我们礼物</em></span>
-        </div>
-      </div>
-
-      <div class="beat">
-        <div class="tc">19:20<br>20:03</div>
-        <div class="bc">
-          <b>Beat 03 — "实际上的檀健次" · 小憨憨差一点就要现身啦</b>
-          <span>Now the cracks: 转圈圈闻香水 · 敲积木耍赖（"真不是故意失败的，道具有机关"）· 玩抓娃娃（"哎呀，这个好好玩"）· 对口型嘟嘴. On-screen 字幕 carries each gag.</span>
-        </div>
-      </div>
-
-      <div class="beat">
-        <div class="tc">19:43</div>
-        <div class="bc">
-          <b>Beat 04 — the line that made the cut</b>
-          <span>He doesn't know the "公主请下单" meme, and says a princess should be treated to being bought for by a prince. That single unguarded moment is the reason the video exists.</span>
-        </div>
-      </div>
-
-      <div class="beat">
-        <div class="tc">19:47<br>close</div>
-        <div class="bc">
-          <b>Beat 05 — hand it back to him</b>
-          <span>His own audio ("欢迎来我家！"), then a third AI voice — this one in 孙悟空's register — closes it out: <em>这到底是谁家的小可爱，快来领回家</em></span>
-        </div>
-      </div>
+<h3>Tan Jianci · Composed to playful</h3><div class="smeta">Visuals / Narration / Timecode · Editing directions from the original script</div><div class="beat"><div class="tc"><span class="timecode-label">Timecode</span>19:08 · 19:12 · 19:31 · 19:54 · 19:57 · 19:59</div><div class="bc"><b>01 · Composed opening</b><span><strong class="script-field">Visuals</strong>Select composed fragrance and performance moments to establish the opening persona.</span><span lang="zh-CN"><strong class="script-field">Narration</strong>表面上的檀健次：木质感温润公子</span></div></div><div class="beat"><div class="tc"><span class="timecode-label">Timecode</span>20:04 visuals · 20:00 audio</div><div class="bc"><b>02 · Gift moment</b><span><strong class="script-field">Visuals</strong>Pair the signing footage with the livestream’s campaign introduction.</span><span lang="zh-CN"><strong class="script-field">Narration</strong>公子送我们礼物</span></div></div><div class="beat"><div class="tc"><span class="timecode-label">Timecode</span>19:20 · 19:33 · 19:44 · 19:50 · 20:03</div><div class="bc"><b>03 · Playful contrast</b><span><strong class="script-field">Visuals</strong>Contrast the opening with playful fragrance, building-block and claw-machine moments.</span><span lang="zh-CN"><strong class="script-field">Narration</strong>实际上的檀健次：小憨憨差一点就要现身啦<br>仿佛我看的不是上播大明星，是上播小憨憨</span><span><strong class="script-field">Subtitles</strong>玩积木失败耍赖 · 开心玩抓娃娃 · 转圈圈 · 哈——</span><span><strong class="script-field">Dialogue</strong>真不是故意失败的，道具有机关<br>哎呀，这个好好玩</span></div></div><div class="beat"><div class="tc"><span class="timecode-label">Timecode</span>19:43</div><div class="bc"><b>04 · Princess joke</b><span><strong class="script-field">Visuals</strong>Use the unexpected interpretation of the ordering meme as a comic beat.</span><span><strong class="script-field">Subtitles</strong>不知道公主请下单的梗</span></div></div><div class="beat"><div class="tc"><span class="timecode-label">Timecode</span>19:47 audio · Closing sequence</div><div class="bc"><b>05 · Closing invitation</b><span><strong class="script-field">Visuals</strong>Close with the character-style AI voice, followed by the artist’s own invitation.</span><span lang="zh-CN"><strong class="script-field">Narration</strong>啊，这不是，这不是，这是到底是谁家的小可爱，快来领回家</span><span><strong class="script-field">Dialogue</strong>欢迎来我家！</span></div></div>
     </div>
   </div>
 </section>
@@ -717,7 +532,7 @@ html{scroll-behavior:smooth}
   <div class="wrap">
     <div class="results">
       <span class="eyebrow">07 — Results</span>
-      <div class="big">The IP published its own numbers. Here they are, set against the slice of the campaign I actually touched.</div>
+      <div class="big">Campaign performance</div>
 
       <div class="rlabel">上播大明星 at full scale — as published by Taobao Live's official account</div>
       <div class="rgrid">
@@ -728,50 +543,59 @@ html{scroll-behavior:smooth}
         <div><b>1M+</b><span>new customers in the live rooms</span></div>
       </div>
 
-      <div class="rlabel">My scope inside it</div>
-      <div class="mine">
-        <div><b>30+</b><span>artists I wrote for</span></div>
-        <div><b>~20</b><span>fan groups per artist</span></div>
-        <div><b>436</b><span>community copy variants</span></div>
-        <div><b>231</b><span>comment-section posts</span></div>
-        <div><b>1</b><span>official campaign PR article</span></div>
-      </div>
-
-      <p style="margin-top:28px">Those upper figures belong to the whole 上播大明星 IP — a platform-level campaign far wider than the roster my team handled. Taobao Live did not share per-artist performance data with the agency, so this case reports the campaign's published scale and my own output side by side, rather than claiming the platform's numbers as a result of my work.</p>
-      <p style="margin-top:14px;font-size:12.5px;color:rgba(255,255,255,.45)">Campaign figures as published by Taobao Live's official account after the campaign; the article on that account was written by me. Scope figures from my own delivery records.</p>
+      <p style="margin-top:24px">These published figures reflect the full platform campaign, beyond the 30+ artist roster supported by my team. They are not attributed to my individual work.</p>
     </div>
   </div>
 </section>
 
-<footer class="footer">
-  <div class="wrap">
-    <div class="demo-note">
-      <strong>Attribution.</strong> Campaign work produced at Shengu Media for Taobao Live (Alibaba Group), Double 11 2023. Co-branded announcement posters and gift-box artwork are client and brand assets, reproduced here as campaign context for a non-commercial portfolio.
-    </div>
-    <div class="demo-note">
-      <strong>On the sources.</strong> Copy and script extracts are from my own original campaign documents. Volume figures are counted from the documents I still hold; where a figure could not be verified, the case says so rather than estimating. No budgets, supplier pricing or internal commercial terms are reproduced.
-    </div>
-  </div>
-</footer>
+<footer class="footer"><div class="wrap case-navigation"><a href="index.html#work">← Back to selected work</a><a href="index.html#contact">Get in touch →</a></div></footer>
 
 <script>
 (function(){
-  var sel = '.resp-item, .stage, .figure, .copycard, .script, .rung, .results, .sheet, .pull, .why div, .matrix, .beat, .rgrid, .mine';
-  var targets = document.querySelectorAll(sel);
-  if(!('IntersectionObserver' in window)) return;
-  for(var i=0;i<targets.length;i++){
-    targets[i].style.opacity = '0';
-    targets[i].style.transform = 'translateY(14px)';
-    targets[i].style.transition = 'opacity .5s ease, transform .5s ease';
+  var selector = '.resp-item, .stage, .figure, .copycard, .script, .results';
+  var candidates = Array.prototype.slice.call(document.querySelectorAll(selector));
+  var targets = candidates.filter(function(el){
+    return !candidates.some(function(parent){ return parent !== el && parent.contains(el); });
+  });
+  if(!('IntersectionObserver' in window) || !targets.length) return;
+  var motion = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+  var observer;
+  function show(el){ el.style.opacity = '1'; el.style.transform = 'none'; }
+  function showAll(){
+    if(observer) observer.disconnect();
+    targets.forEach(function(el){ el.style.transition = 'none'; show(el); });
   }
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){ e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; io.unobserve(e.target); }
+  if(motion && motion.matches){ showAll(); return; }
+  try{
+    observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ show(entry.target); observer.unobserve(entry.target); }
+      });
+    }, { threshold:0, rootMargin:'0px 0px -30px 0px' });
+    targets.forEach(function(el){
+      var rect = el.getBoundingClientRect();
+      if(rect.top < window.innerHeight - 30){ show(el); return; }
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(14px)';
+      el.style.transition = 'opacity .5s ease, transform .5s ease';
+      observer.observe(el);
     });
-  },{threshold:.1, rootMargin:'0px 0px -40px 0px'});
-  for(var j=0;j<targets.length;j++){ io.observe(targets[j]); }
+    if(motion){
+      var onChange = function(event){ if(event.matches) showAll(); };
+      if(motion.addEventListener) motion.addEventListener('change', onChange);
+      else if(motion.addListener) motion.addListener(onChange);
+    }
+    window.addEventListener('beforeprint', showAll);
+  }catch(error){ showAll(); }
 })();
 </script>
 <script>(function(){var e=document.getElementById("sp");if(!e)return;function u(){var h=document.documentElement.scrollHeight-window.innerHeight;e.style.width=(h>0?(window.pageYOffset/h)*100:0)+"%";}window.addEventListener("scroll",u,{passive:true});window.addEventListener("resize",u);u();})();</script>
-</body>
+<style>.hero-summary{max-width:740px;margin:22px 0 0;font-size:16px;line-height:1.75}.sec-head .background-copy{max-width:820px;font-size:14.5px;line-height:1.75}.resp-item .badge{position:static;display:inline-block;max-width:100%;line-height:1.5;margin-bottom:12px;border-radius:8px}.resp-item h4{padding-right:0}.footer{background:transparent;border-top:1px solid var(--line)}.case-navigation{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.case-navigation a{color:var(--pine-accent);font-size:14px;font-weight:600;text-decoration:none}#tb.stuck .mark{color:#fff}</style><style>
+.script .beat{grid-template-columns:145px minmax(0,1fr)}
+.script .tc{font-family:var(--font-sans);font-size:12px;line-height:1.7;color:rgba(255,255,255,.66)}
+.timecode-label{display:block;font-size:10px;font-weight:600;letter-spacing:.08em;margin-bottom:6px}
+.script .bc>span{margin-top:9px}
+.script-field{display:block;font-size:10px;font-weight:600;letter-spacing:.06em;color:inherit;margin-bottom:3px}
+@media(max-width:640px){.script .beat{grid-template-columns:1fr}}
+</style><script src="assets/work-navigation.js"></script></body>
 </html>

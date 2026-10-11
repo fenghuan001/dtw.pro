@@ -5,22 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Pitch Experience — Du Tingwei, Anna</title>
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<meta name="description" content="Six competitive briefs answered from scratch, with the section I owned named on every card.">
 <link rel="canonical" href="https://fenghuan001.github.io/dtw.pro/pitch-experience.html">
 <meta property="og:url" content="https://fenghuan001.github.io/dtw.pro/pitch-experience.html">
+<meta property="og:image" content="https://fenghuan001.github.io/dtw.pro/assets/og-card.jpg">
+<meta name="twitter:image" content="https://fenghuan001.github.io/dtw.pro/assets/og-card.jpg">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta name="description" content="Six competitive briefs answered from scratch, with the section I owned named on every card.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Du Tingwei, Anna">
 <meta property="og:title" content="Pitch Experience — Du Tingwei, Anna">
 <meta property="og:description" content="Six competitive briefs answered from scratch, with the section I owned named on every card.">
-<meta property="og:image" content="https://fenghuan001.github.io/dtw.pro/assets/og-card.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Du Tingwei, Anna — Account Executive, Integrated Marketing and Content Strategy">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Pitch Experience — Du Tingwei, Anna">
 <meta name="twitter:description" content="Six competitive briefs answered from scratch, with the section I owned named on every card.">
-<meta name="twitter:image" content="https://fenghuan001.github.io/dtw.pro/assets/og-card.jpg">
 <meta name="theme-color" content="#0A2E29">
 <style>
 :root{
@@ -141,7 +141,7 @@ section+section{border-top:1px solid var(--line)}
   .closing .fine{color:#666 !important;border-top-color:#ddd !important}
 }
 </style>
-</head>
+<style>body{--muted:#62666E}a:focus-visible,button:focus-visible{outline:3px solid #D6A84B;outline-offset:5px}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation:none!important;transition:none!important}}</style><link rel="stylesheet" href="assets/work-navigation.css"><style>img{height:auto}</style></head>
 <body>
 <div id="sp" aria-hidden="true"></div>
 <style id="plcss">
@@ -208,19 +208,20 @@ section+section{border-top:1px solid var(--line)}
     if(reduce.matches) rest(); else frame = requestAnimationFrame(tick);
   }
   function done(){
+    if(ready) return;
     ready = true;
     if(!shown){ loader.style.display = 'none'; document.body.setAttribute('aria-busy','false'); return; }
-    // let the star finish the orbit it is currently on, rather than cutting it off
-    var el = performance.now() - showAt;
-    finishAt = showAt + Math.max(1, Math.ceil(el / ORBIT)) * ORBIT;
+    finishAt = performance.now();
     if(reduce.matches) hide(); else frame = requestAnimationFrame(tick);
   }
   window.finishLogoLoading = done;
 
   // only appear when the page is actually slow
   setTimeout(function(){ if(!ready) show(); }, GRACE);
-  if(document.readyState === 'complete') done();
-  else window.addEventListener('load', done, { once:true });
+  // Release the overlay when readable HTML is ready, independently of images.
+  setTimeout(done, 2000);
+  if(document.readyState !== 'loading') done();
+  else document.addEventListener('DOMContentLoaded', done, { once:true });
   document.addEventListener('visibilitychange', function(){ if(!document.hidden && shown && ready) hide(); });
 })();
 </script>
@@ -251,9 +252,9 @@ html{scroll-behavior:smooth}
   <div class="in">
     <a class="brand" href="index.html" aria-label="Back to the portfolio home"><svg class="mark" viewBox="0 0 1254 1254" fill="currentColor" aria-hidden="true" focusable="false"><defs><clipPath id="tbm-l"><rect x="345" y="760" width="151" height="150"/></clipPath><clipPath id="tbm-r"><rect x="750" y="600" width="240" height="270"/></clipPath><mask id="tbm-o" maskUnits="userSpaceOnUse" x="0" y="0" width="1254" height="1254" style="mask-type:luminance"><rect width="1254" height="1254" fill="white"/><path clip-path="url(#tbm-l)" d="M 351 815 C 544 817 864 743 1027 616" fill="none" stroke="black" stroke-width="36"/><path clip-path="url(#tbm-r)" d="M 351 883 C 577 888 912 773 1058 630" fill="none" stroke="black" stroke-width="36"/></mask></defs><path mask="url(#tbm-o)" fill-rule="evenodd" d="M 252 325 L 578 325 C 808 325 950 444 956 650 C 961 854 832 978 590 978 L 249 978 L 249 971 C 327 957 354 938 354 869 L 354 423 C 354 362 330 341 252 333 Z M 487 398 L 487 891 C 487 936 508 952 575 952 C 717 952 803 857 803 652 C 803 450 717 347 579 347 L 528 347 C 497 347 487 362 487 398 Z"/><path d="M 341 644 C 236 683 132 735 129 786 C 123 849 218 881 351 883 C 577 888 912 773 1058 630 C 1088 599 1099 566 1101 538 C 1083 569 1058 591 1027 616 C 864 743 544 817 351 815 C 244 814 183 806 178 782 C 171 752 244 694 336 651 Q 342 648 341 644 Z"/><path d="M 1117 403 C 1109 458 1099 469 1045 478 C 1098 485 1109 498 1117 551 C 1125 498 1136 486 1190 479 C 1136 471 1126 458 1117 403 Z"/></svg></a>
     <nav class="nav" aria-label="Main">
-      <a href="index.html#work">Selected Work</a>
+      <div class="work-dropdown"><a href="index.html#work">Selected Work</a><button class="work-toggle" type="button" aria-label="Show selected projects" aria-expanded="false" aria-controls="work-projects"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="m2 4 4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></button><div class="work-projects" id="work-projects" hidden><a href="haidilao-case.html">Haidilao</a><a href="quark-scan-king-case.html">Quark Scan King</a><a href="juhuasuan-case.html">Juhuasuan</a><a href="eleme-lichun-case.html">Ele.me</a><a href="taobao-live-case.html">Taobao Live</a></div></div>
       <a href="pitch-experience.html">Pitch</a>
-      <a href="anna-du-cv.pdf" download>CV</a>
+      <a href="resume.html">Resume</a>
       <a href="index.html#contact">Contact</a>
     </nav>
   </div>
@@ -285,12 +286,12 @@ html{scroll-behavior:smooth}
       <span class="eyebrow">Pitch Experience</span>
       <span class="eyebrow" style="color:rgba(255,255,255,.42)">Competitive Briefs · 2023–2024</span>
     </div>
-    <h1>Six briefs, answered from scratch</h1>
-    <p class="sub">Pitch work at Shengu Media</p>
-    <p class="hero-lede">A competitive pitch is where you find out how someone thinks when there is no brand guideline to hide behind and no previous campaign to copy. These six were answered under deadline against budgets, teams and agencies I could not see. None of them reached production — so what is here is the thinking, and on every card, the specific section of each proposal that was mine.</p>
+    <h1>Creative contributions to six pitches</h1>
+    <p class="sub">Pitch work at Beijing Shiny Gold</p>
+    <p class="hero-lede">I contributed to six competitive pitches, developing content ideas, KOL activations, offline events, visual mockups and campaign mechanics. Each project identifies my contribution within the team’s proposal. All six remained at the proposal stage and were not executed.</p>
     <dl class="meta">
       <div><dt>Pitches</dt><dd>Six competitive briefs</dd></div>
-      <div><dt>Clients</dt><dd>夸克 · 小度 · 起点读书<br>饿了么 · UC · 淘宝</dd></div>
+      <div><dt>Clients</dt><dd>Quark · Xiaodu · Qidian Reading<br>Ele.me · UC Browser · Taobao</dd></div>
       <div><dt>Period</dt><dd>2023 – 2024</dd></div>
       <div><dt>Owned</dt><dd>One named section<br>in every proposal</dd></div>
     </dl>
@@ -306,9 +307,9 @@ html{scroll-behavior:smooth}
       </div>
       <div class="out-grid">
         <div class="out"><b>6</b><span>competitive pitches across six different brands</span></div>
-        <div class="out"><b>6</b><span>sections owned solo — one per pitch, named and page-referenced</span></div>
+        <div class="out"><b>6</b><span>independent contributions within team proposals</span></div>
         <div class="out"><b>1</b><span>concept I proposed that made the final deck — Quark's "专业军师"</span></div>
-        <div class="out"><b>6 / 6</b><span>answered under deadline, with no brand guideline to work from</span></div>
+        <div class="out"><b>4</b><span>selected visual mockups shown below</span></div>
       </div>
       <div class="out-scope">
         <span class="sl">Across</span>
@@ -321,7 +322,6 @@ html{scroll-behavior:smooth}
         <span class="sc">Creator content planning</span>
         <span class="sc">Overall creative planning</span>
       </div>
-      <p class="source-note">On every card, "Overall creative planning" is credited as team work; the section named under "What I owned" is mine alone. Page references point to the page range of the proposal deck that covers that section.</p>
     </div>
   </div>
 </section>
@@ -372,8 +372,8 @@ html{scroll-behavior:smooth}
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">01 — The Pitches</span>
-      <h2>What each brief was really asking</h2>
-      <p>Every card is set out the same way: the brief, the idea the proposal put forward, the section I owned, and why that idea holds up. "Overall creative planning" was team work on all six; the section under "What I owned" was mine alone.</p>
+      <h2>Selected pitch contributions</h2>
+      <p>Selected sections showcasing content planning, creative concepts and campaign mechanics.</p>
     </div>
 
     <div class="pitches">
@@ -381,45 +381,46 @@ html{scroll-behavior:smooth}
         <div class="p-head">
           <span class="p-no">01</span>
           <div>
-            <div class="p-client">夸克 Quark</div>
+            <div class="p-client">Quark</div>
             <div class="p-sector">Search · consumer app</div>
           </div>
           <span class="p-year">2024</span>
         </div>
-        <div class="p-body">
-          <div class="p-block">
-            <div class="p-lbl">The brief</div>
-            <p>Win a crowded gaokao-season pitch — the same audience, in the same three weeks, with the same promise as every other search and education app.</p>
-          </div>
-
-          <div class="p-block idea">
-            <div class="p-lbl">The idea</div>
-            <p>Sell <b>a free volunteer-application advisory service</b>, not a search box — a "专业军师团" of three named strategists instead of one interchangeable spokesperson.</p>
-            <p>Two poster systems carried it: a four-step feature guide rebuilt per persona, and a pain-point series where the answer to every question is a screenshot of the product itself.</p>
-            <div class="chips">
-              <span class="chip">报志愿怕「浪费分数」怎么办 → 【模拟选志愿】</span>
-              <span class="chip">选大学 A，还是选专业 B？→ 不知选啥就选 Q</span>
-            </div>
-          </div>
-
-          <div class="p-block mine">
-            <div class="p-lbl">What I owned</div>
-            <span class="sec">产品功能传播 — 产品功能向创意物料示意</span>
-            <span class="pg">pp. 54–60 of the proposal</span>
-            <p>The product-feature leg of the deck: the four-step feature guide built per persona (province, subject combination, score and worry all different for each) and the pain-point poster series that pairs every worry with the product screen that removes it.</p>
-            <p>I also proposed the <b>"专业军师"</b> concept, which was adopted into the proposal and became its slogan: <b>专业军师，轻松选择</b>.</p>
-          </div>
-
-          <div class="p-block">
-            <div class="p-lbl">Why it holds up</div>
-            <p>It answers the question a parent is actually asking — <em>what happens if we waste this score?</em> — instead of listing features. And the poster system is a template, not six separate designs: the same layout regenerates for any province and subject combination, which is what makes it producible inside a gaokao window.</p>
-          </div>
+        <div class="p-body"><div class="p-block"><div class="p-lbl">The brief</div><p>Communicate Quark’s university and major-selection tools during the gaokao application season.</p></div><div class="p-block mine"><div class="p-lbl">My contribution</div><p>Developed product-feature mockups, including persona-based guides and pain-point copy. Proposed “专业军师” (an expert guide to choosing a major), which was incorporated into the team’s proposal.</p></div><div class="p-block"><div class="p-lbl">Selected concept</div><p><b>专业军师，轻松选择</b></p><p>Pair a student’s application concern with the relevant product screen, then demonstrate the selection process using different scores, provinces and subject combinations.</p></div></div>
+<div class="quark-card-art"><h4>Selected visual mockups</h4><p class="mockup-hint">Click to view full-size</p><div class="art-wall">
+      <div class="poster">
+        <a class="mockup-preview" href="assets/quark-pitch-q.jpg" target="_blank" rel="noopener" aria-label="View full-size mockup: Pain-point poster: 报志愿 怕浪费分数 怎么办"><img src="assets/quark-pitch-q.jpg" alt="Pain-point poster: 报志愿 怕浪费分数 怎么办" width="481" height="693" loading="lazy" decoding="async"></a>
+        <div class="pc">
+          <div class="pl2">Pain-point copy</div>
+          <p>报志愿 怕「浪费分数」怎么办</p>
         </div>
-        <div class="p-foot">
+      </div>
+      <div class="poster">
+        <a class="mockup-preview" href="assets/quark-pitch-a.jpg" target="_blank" rel="noopener" aria-label="View full-size mockup: Answer poster: 冲稳保一键get, 模拟选志愿"><img src="assets/quark-pitch-a.jpg" alt="Answer poster: 冲稳保一键get, 模拟选志愿" width="471" height="683" loading="lazy" decoding="async"></a>
+        <div class="pc">
+          <div class="pl2">Feature response</div>
+          <p>冲稳保一键get → 【模拟选志愿】你的分数管理大师</p>
+        </div>
+      </div>
+      <div class="poster">
+        <a class="mockup-preview" href="assets/quark-pitch-ab.jpg" target="_blank" rel="noopener" aria-label="View full-size mockup: Choice poster: 选大学A 还是选专业B"><img src="assets/quark-pitch-ab.jpg" alt="Choice poster: 选大学A 还是选专业B" width="502" height="707" loading="lazy" decoding="async"></a>
+        <div class="pc">
+          <div class="pl2">Choice concept</div>
+          <p>选大学 A，还是选专业 B？不知选啥就选 Q</p>
+        </div>
+      </div>
+      <div class="poster">
+        <a class="mockup-preview guide-preview" href="assets/quark-pitch-guide.jpg" target="_blank" rel="noopener" aria-label="View full-size mockup: Four-step feature guide poster"><img src="assets/quark-pitch-guide.jpg" alt="Four-step feature guide poster" width="453" height="1091" loading="lazy" decoding="async"></a>
+        <div class="pc">
+          <div class="pl2">Full guide · Click to view</div>
+          <p>Four-step guide tailored to a student’s score, province and subject combination</p>
+        </div>
+      </div>
+    </div></div><div class="p-foot">
           <span class="p-lbl">My input</span>
-          <span class="tag k">Feature-creative materials — solo</span>
-          <span class="tag">Proposed concept, adopted</span>
-          <span class="tag t">Overall planning — team</span>
+          <span class="tag k">Independent contribution</span>
+          <span class="tag">Concept included in proposal</span>
+          <span class="tag t">Team proposal</span>
         </div>
       </article>
 
@@ -427,44 +428,16 @@ html{scroll-behavior:smooth}
         <div class="p-head">
           <span class="p-no">02</span>
           <div>
-            <div class="p-client">小度 Xiaodu <span style="font-weight:400;color:var(--muted);font-size:13px">(Baidu)</span></div>
+            <div class="p-client">Xiaodu <span style="font-weight:400;color:var(--muted);font-size:13px">(Baidu)</span></div>
             <div class="p-sector">AI hardware · education tech</div>
           </div>
           <span class="p-year">2024</span>
         </div>
-        <div class="p-body">
-          <div class="p-block">
-            <div class="p-lbl">The brief</div>
-            <p>Differentiate an AI learning tablet that was losing a pure feature comparison on Douyin. Every competitor was shouting the same benefit at the same parent: 省妈 — "it saves the mother".</p>
-          </div>
-
-          <div class="p-block idea">
-            <div class="p-lbl">The idea</div>
-            <p>Move the product from <b>a tool that frees up a parent</b> to <b>a role inside the family</b> — 家有AI更有爱. The machine sits between parent and child instead of replacing one of them.</p>
-          </div>
-
-          <div class="p-block mine">
-            <div class="p-lbl">What I owned</div>
-            <span class="sec">平台资源与 IP 热点 — the Douyin in-platform play</span>
-            <span class="pg">pp. 35–47 of the proposal</span>
-            <p>The Douyin in-platform IP tie-in and the campaign's flagship challenge. I designed <b>#60分贝有爱辅导挑战</b>: the insight is that a parent's frustration during homework has one signature tell — they raise their voice. So the mechanic is a <b>Douyin AR effect with a decibel meter built into it</b>, and the challenge is to keep your voice under 60dB while tutoring.</p>
-            <p>Rollout runs as a creator relay: a head KOL opens the topic, three to five mid-tier KOLs carry it, then each @-mentions the next so the fan pools interconnect. The content beat is fixed in advance — first attempt alone fails, second attempt with the tablet succeeds.</p>
-            <div class="chips">
-              <span class="chip">抖音特效置入分贝测试组件</span>
-              <span class="chip">达人接力三步走</span>
-              <span class="chip">失败 → 转折 → 种草</span>
-            </div>
-          </div>
-
-          <div class="p-block">
-            <div class="p-lbl">Why it holds up</div>
-            <p>It turns an invisible problem into a measurable, filmable one. "I lose my temper over homework" is not a post; a decibel reading that spikes into the red is — and the failure is what makes the content, so every creator has something worth posting.</p>
-          </div>
-        </div>
-        <div class="p-foot">
+        <div class="p-body"><div class="p-block"><div class="p-lbl">The brief</div><p>Develop a distinctive Douyin campaign for Xiaodu’s AI learning tablet.</p></div><div class="p-block mine"><div class="p-lbl">My contribution</div><p>Developed the Douyin platform-IP approach and a creator challenge linking homework frustration with the tablet’s proposed role in family learning.</p></div><div class="p-block"><div class="p-lbl">Selected concept</div><p><b>#60分贝有爱辅导挑战</b></p><p>Proposed an AR decibel-meter effect inviting parents to keep their voices below 60dB while tutoring. A planned KOL relay would show a difficult homework moment followed by a tablet-assisted attempt.</p></div></div>
+<div class="proposal-visuals"><figure><a href="assets/pitch-xiaodu-45.jpg" target="_blank" rel="noopener" aria-label="Open full-size proposal visual: Proposed decibel-meter challenge"><img src="assets/pitch-xiaodu-45.jpg" alt="Proposed decibel-meter challenge" loading="lazy" width="1440" height="810" decoding="async"></a><figcaption>An AR decibel meter would turn calm homework tutoring into a participatory challenge.<small>Click to view full-size</small></figcaption></figure><figure><a href="assets/pitch-xiaodu-46.jpg" target="_blank" rel="noopener" aria-label="Open full-size proposal visual: Planned creator rollout"><img src="assets/pitch-xiaodu-46.jpg" alt="Planned creator rollout" loading="lazy" width="1440" height="810" decoding="async"></a><figcaption>A creator relay would contrast a difficult homework moment with tablet-assisted learning.<small>Click to view full-size</small></figcaption></figure></div><div class="p-foot">
           <span class="p-lbl">My input</span>
-          <span class="tag k">Platform IP &amp; challenge mechanic — solo</span>
-          <span class="tag t">Overall planning — team</span>
+          <span class="tag k">Independent contribution</span>
+          <span class="tag t">Team proposal</span>
         </div>
       </article>
 
@@ -472,94 +445,32 @@ html{scroll-behavior:smooth}
         <div class="p-head">
           <span class="p-no">03</span>
           <div>
-            <div class="p-client">起点读书 × 庆余年2</div>
+            <div class="p-client">Qidian Reading × Joy of Life 2</div>
             <div class="p-sector">Reading app · IP partnership</div>
           </div>
           <span class="p-year">2024</span>
         </div>
-        <div class="p-body">
-          <div class="p-block">
-            <div class="p-lbl">The brief</div>
-            <p>Raise the brand's association with a flagship IP beyond the standard episode tie-in — where every platform buys the same star and posts the same stills.</p>
-          </div>
-
-          <div class="p-block idea">
-            <div class="p-lbl">The idea</div>
-            <p>The proposal's offline answer was a 上脑招式 series — three escalating moves. The flagship was a book-to-place travel collaboration with 携程: two routes, <b>寻找起源</b> (the places the book came from) and <b>沉浸观景</b> (the places it was filmed).</p>
-            <p>Around that sat a set of city-level activations — the part of the deck that had to work on a street, not on a slide.</p>
-          </div>
-
-          <div class="p-block mine">
-            <div class="p-lbl">What I owned</div>
-            <span class="sec">起点剧上脑的有声书 — the audiobook activations</span>
-            <span class="pg">Within 线下创意部分 · pp. 44–68 of the proposal</span>
-            <p>Two offline events, both built to put a reading app into a public space with no screen anywhere in it.</p>
-            <p><b>剧上脑的移动书摊</b> — the insight is that a street stall is the sound of a city: <em>“锵剪子、磨菜刀……”</em>, <em>“油炸糕……”</em>. Adults no longer have the patience for print, but they will listen. So a 起点红 audiobook stall is wheeled through the busy streets of 天津 · 上海 · 广州, staffed by a 说书大爷 in traditional 长衫, dark glasses and a folding fan, with a 五竹 bodyguard in costume standing behind him. The stall carries 起点 IP cover posters, a QR code, a speaker, 糖葫芦, a teapot and a chicken leg. Douyin's silver-haired creators — @王德顺, @末那大叔, @康康和爷爷 — were booked as the storytellers.</p>
-            <p><b>起点十三城剧上脑的伴手礼</b> — tied to 范闲大婚 in the drama: a deliberately light giveaway built into thirteen subway stations across thirteen cities — 上海塘桥 · 深圳民治 · 成都春熙路 · 重庆沙坪坝 · 杭州龙翔桥 · 武汉宝通寺 · 西安小寨 · 天津营口道 · 苏州东方之门 · 南京东方福来德 · 郑州二七广场 · 长沙五一广场 · 青岛台东. Wedding sweets and gifts handed out at rush hour, with a check-in wall where passers-by wrote a line about the book or the show.</p>
-            <div class="chips">
-              <span class="chip">#大爷用说书的方式打开网络爽文#</span>
-              <span class="chip">#范闲林婉儿在地铁站发喜糖#</span>
-              <span class="chip">#下班路上看见范闲在地铁站发喜糖#</span>
-            </div>
-          </div>
-
-          <div class="p-block">
-            <div class="p-lbl">Why it holds up</div>
-            <p>The book stall is <em>a sound format for a product about listening</em> — you hear the 吆喝 before you see the stall, which is exactly how an audiobook works. And the contrast is the whole idea: a web-novel brand that has been online since 2002 choosing a street stall and an old man as its delivery mechanism.</p>
-            <p>The subway giveaway goes the opposite way and stays deliberately light. A rush-hour crowd will not stop, so it is built to be understood in five seconds with one hand — and by hanging it on the drama's biggest emotional beat, the gift arrived with its own reason to be accepted.</p>
-          </div>
-        </div>
-        <div class="p-foot">
+        <div class="p-body"><div class="p-block"><div class="p-lbl">The brief</div><p>Connect Qidian Reading with Joy of Life 2 through offline experiences.</p></div><div class="p-block mine"><div class="p-lbl">My contribution</div><p>Developed two audiobook-related offline activation concepts within the team’s broader IP proposal.</p></div><div class="p-block"><div class="p-lbl">Selected concept</div><div class="activation-concepts"><div><span class="concept-number">01</span><h4>移动有声书摊</h4><p>A mobile storytelling stall would bring audiobook excerpts into busy public spaces, with themed performers and a QR code linking back to Qidian.</p></div><div><span class="concept-number">02</span><h4>剧上脑的伴手礼</h4><p>A proposed subway giveaway would use Fan Xian’s wedding storyline to connect themed sweets, gifts and a check-in wall with the reading app.</p></div></div></div></div>
+<div class="proposal-visuals"><figure><a href="assets/pitch-qidian-48.jpg" target="_blank" rel="noopener" aria-label="Open full-size proposal visual: Mobile audiobook stall concept"><img src="assets/pitch-qidian-48.jpg" alt="Mobile audiobook stall concept" loading="lazy" width="1440" height="810" decoding="async"></a><figcaption>A mobile stall would bring audiobook excerpts into public spaces and link listeners to Qidian.<small>Click to view full-size</small></figcaption></figure><figure><a href="assets/pitch-qidian-62.jpg" target="_blank" rel="noopener" aria-label="Open full-size proposal visual: Subway giveaway participation"><img src="assets/pitch-qidian-62.jpg" alt="Subway giveaway participation" loading="lazy" width="1440" height="810" decoding="async"></a><figcaption>Wedding-themed gifts and a check-in wall would connect the drama’s storyline with participation.<small>Click to view full-size</small></figcaption></figure></div><div class="p-foot">
           <span class="p-lbl">My input</span>
-          <span class="tag k">Offline audiobook activations — solo</span>
-          <span class="tag t">Overall planning — team</span>
+          <span class="tag k">Independent contribution</span>
+          <span class="tag t">Team proposal</span>
         </div>
       </article>
       <article class="pitch">
         <div class="p-head">
           <span class="p-no">04</span>
           <div>
-            <div class="p-client">饿了么 × 巴黎奥运</div>
+            <div class="p-client">Ele.me · Summer Sports</div>
             <div class="p-sector">Food delivery · event tie-in</div>
           </div>
           <span class="p-year">2024</span>
         </div>
-        <div class="p-body">
-          <div class="p-block">
-            <div class="p-lbl">The brief</div>
-            <p>Turn Olympic attention into app engagement — during a fortnight when every brand in the country was buying the same association, and a food-delivery app has no rights to any of it.</p>
-          </div>
-
-          <div class="p-block idea">
-            <div class="p-lbl">The idea</div>
-            <p>Run an in-app <b>夏季运动会</b> — a series of mini-games released in sync with the Olympic schedule, each one matching a different sport, with free-delivery draws as the reward. Four games, four events:</p>
-            <div class="chips">
-              <span class="chip">射击 → 《百发百中》</span>
-              <span class="chip">游泳 → 《泳气大爆发》</span>
-              <span class="chip">霹雳舞 → 《酷炫霹雳》</span>
-              <span class="chip">乒乓球 → 《有球必应》</span>
-            </div>
-          </div>
-
-          <div class="p-block mine">
-            <div class="p-lbl">What I owned</div>
-            <span class="sec">【玩法介绍】游戏部分 — the game mechanic</span>
-            <span class="pg">The gameplay section of the proposal</span>
-            <p>The rule set that turns four mini-games into one campaign mechanic:</p>
-            <p>① Play the games, accumulate points and 吃货豆; crossing a points threshold unlocks a free-delivery draw — <b>capped at one per player per day</b>, so the campaign lasts the fortnight rather than one afternoon.</p>
-            <p>② Draw winners are then ranked <b>by province</b>. If a player's province places top three, they get an extra draw at a ¥10 red packet.</p>
-            <p>③ The <b>blue rider appears as a support character</b>, handing out scoring tips — written as the "strongest assist", modelled on the way a game like 王者荣耀 uses 妲己.</p>
-          </div>
-
-          <div class="p-block">
-            <div class="p-lbl">Why it holds up</div>
-            <p>The daily cap is what makes it a campaign instead of a giveaway, and the province ranking is what makes it social — a player is no longer playing for a voucher, they are playing for their province. And the rider only appears to <em>help</em>, which is the cheapest possible way to make a delivery mascot mean something.</p>
-          </div>
-        </div>
-        <div class="p-foot">
+        <div class="p-body"><div class="p-block"><div class="p-lbl">The brief</div><p>Create a summer sports-themed activation that connects entertainment with Ele.me app participation.</p></div><div class="p-block mine"><div class="p-lbl">My contribution</div><p>Developed gameplay rules, reward limits, province rankings and the delivery-rider support role for the proposed mini-game campaign.</p></div><div class="p-block"><div class="p-lbl">Selected concept</div><p><b>夏季运动会</b></p><p>Four sports-themed games would award points and food-reward tokens (“吃货豆”), unlocking one delivery-reward draw per player per day. Top-ranked provinces would receive an additional ¥10 red-packet draw; a rider character would provide gameplay tips.</p></div></div>
+<div class="p-foot">
           <span class="p-lbl">My input</span>
-          <span class="tag k">Game mechanic &amp; rules — solo</span>
-          <span class="tag t">Overall planning — team</span>
+          <span class="tag k">Independent contribution</span>
+          <span class="tag t">Team proposal</span>
         </div>
       </article>
 
@@ -567,90 +478,32 @@ html{scroll-behavior:smooth}
         <div class="p-head">
           <span class="p-no">05</span>
           <div>
-            <div class="p-client">UC 浏览器 × 功夫熊猫4</div>
+            <div class="p-client">UC Browser × Kung Fu Panda 4</div>
             <div class="p-sector">Browser · film IP</div>
           </div>
           <span class="p-year">2024</span>
         </div>
-        <div class="p-body">
-          <div class="p-block">
-            <div class="p-lbl">The brief</div>
-            <p>Tie a browser's entertainment features to a film IP — without the whole thing reading as an advert for the film.</p>
-          </div>
-
-          <div class="p-block idea">
-            <div class="p-lbl">The idea</div>
-            <p>Use Po's signature moves as the demonstration format: each martial-arts move performs a different UC feature, so the film supplies the visual language and the browser supplies the payload. The activity line is built on an H5 quiz users play and share.</p>
-          </div>
-
-          <div class="p-block mine">
-            <div class="p-lbl">What I owned</div>
-            <span class="sec">活动线-创意内容 → 1、题库内容建议</span>
-            <span class="pg">The first item of the activity-line content plan</span>
-            <p>The question-bank design for the H5 quiz — four question types, each chosen for a reason and each wired to a different UC feature:</p>
-            <p><b>打破惯性思维</b> — 海龟汤 and lateral-thinking puzzles. Odd, witty, deliberately hard; the tie-in is "can't work it out? search it on UC."</p>
-            <p><b>冷知识</b> — facts built to stand alone as a hot-search entry, in the shape of the ones Weibo already carries (e.g. #贡菜就是晒干的莴笋#).</p>
-            <p><b>网络热梗</b> — borrows the traffic of a meme that is already moving.</p>
-            <p><b>超纲类</b> — wuxia and film trivia, niche enough to start an argument, and the closest fit to the Panda IP itself.</p>
-            <p>The bank then became the brief for the KOL question-setters the pitch proposed — a legal question from 罗翔, a memory question from 闲人王昱珩 — so the quiz had a reason to be different every day.</p>
-          </div>
-
-          <div class="p-block">
-            <div class="p-lbl">Why it holds up</div>
-            <p>A quiz is the cheapest possible content format and the easiest to make boring. Sorting the bank by <em>why the player would want the answer</em> — curiosity, trivia, a meme they already know, an argument they want to win — is what makes people play more than one round, and each type hands UC a different feature to be useful with.</p>
-          </div>
-        </div>
-        <div class="p-foot">
+        <div class="p-body"><div class="p-block"><div class="p-lbl">The brief</div><p>Connect UC’s browser features with the Kung Fu Panda 4 partnership.</p></div><div class="p-block mine"><div class="p-lbl">My contribution</div><p>Developed question-bank recommendations for the proposed H5 quiz, organising content by the different reasons users might want to find an answer.</p></div><div class="p-block"><div class="p-lbl">Selected concept</div><p>Use varied quiz prompts to spark curiosity and encourage users to find answers through UC search.</p></div></div>
+<div class="proposal-visuals uc-question-types"><div class="question-type-grid"><div><b>Lateral thinking</b><p>Puzzles that invite users to rethink an assumption.</p></div><div><b>Surprising facts</b><p>Short questions that spark curiosity and discovery.</p></div><div><b>Internet memes</b><p>Familiar references that connect with social conversation.</p></div><div><b>Film &amp; wuxia trivia</b><p>Specialist questions linking entertainment interests with the IP.</p></div></div><p class="fullsize-caption">Original question-bank diagram · <a href="assets/pitch-uc-rId38.png" target="_blank" rel="noopener">Click to view full-size</a></p></div><div class="p-foot">
           <span class="p-lbl">My input</span>
-          <span class="tag k">Quiz content design — solo</span>
-        </div>
+          <span class="tag k">Independent contribution</span>
+        <span class="tag t">Team proposal</span></div>
       </article>
 
       <article class="pitch">
         <div class="p-head">
           <span class="p-no">06</span>
           <div>
-            <div class="p-client">只用淘宝</div>
+            <div class="p-client">Taobao · Everyday Challenges</div>
             <div class="p-sector">E-commerce · UGC activation</div>
           </div>
           <span class="p-year">2023</span>
         </div>
-        <div class="p-body">
-          <div class="p-block">
-            <div class="p-lbl">The brief</div>
-            <p>Reinforce "you can get anything on Taobao" — with no new feature to launch and nothing to announce.</p>
-          </div>
-
-          <div class="p-block idea">
-            <div class="p-lbl">The idea</div>
-            <p><b>「只用淘宝实现一万个可能挑战杯」</b> — a public UGC challenge presented as an awards ceremony for ordinary users, not a marketing campaign. A four-week calendar of themed challenges, each capped at <b>200元</b>, closing with an awards show whose categories are jokes about what users actually did.</p>
-            <div class="chips">
-              <span class="chip">第一周 年底养生计划</span>
-              <span class="chip">第二周 年底旅行新姿势</span>
-              <span class="chip">第三周 仪式感跨年挑战</span>
-              <span class="chip">第四周 新年新角色挑战</span>
-            </div>
-          </div>
-
-          <div class="p-block mine">
-            <div class="p-lbl">What I owned</div>
-            <span class="sec">年底养生计划 — week one of the challenge calendar</span>
-            <span class="pg">pp. 27–30 of the proposal</span>
-            <p>The opening week, built on the observation that this generation's wellness is technical rather than disciplined: 质疑养生 → 理解养生 → 热爱养生. Three 200元 challenges, each wired to a different Taobao service:</p>
-            <p><b>脆皮大学生在宿舍开养生馆</b> — buy the equipment (艾草按摩捶, 刮痧板) on a 200元 budget and open a mini wellness studio in a dorm room, using 省钱助手 to cut the cost and 情绪树洞 for the emotional half of 养生.</p>
-            <p><b>20岁提前体验一周退休人生</b> — plan a week of retirement living on 200元, covering as many daily scenarios as Taobao can serve.</p>
-            <p><b>00后打造一周养生餐不重样</b> — seven days of wellness meals on 200元, no repeats, with 生鲜 for ingredients and 薄荷健康 for the calorie maths behind the menu.</p>
-          </div>
-
-          <div class="p-block">
-            <div class="p-lbl">Why it holds up</div>
-            <p>Wellness is usually sold as discipline — buy this, do this. Framing it as something you can do <em>cheaply and technically</em> makes it a challenge rather than a purchase, and the 200元 cap means the brand is the constraint, not the sponsor. That is the only way a UGC challenge can actually demonstrate a claim like "you can get anything here".</p>
-          </div>
-        </div>
-        <div class="p-foot">
+        <div class="p-body"><div class="p-block"><div class="p-lbl">The brief</div><p>Demonstrate the breadth of Taobao’s products and services through everyday challenges.</p></div><div class="p-block mine"><div class="p-lbl">My contribution</div><p>Developed the opening wellness-themed week within the team’s proposed four-week challenge calendar.</p></div><div class="p-block"><div class="p-lbl">Selected concept</div><p><b>年底养生计划</b></p><p>Three proposed ¥200 challenges: create a dorm-room wellness studio, experience a week of retirement-style living, and prepare seven different wellness meals. Each would connect a relatable task with relevant Taobao products and services.</p></div></div>
+<div class="proposal-visuals"><figure><a href="assets/pitch-taobao-28.jpg" target="_blank" rel="noopener" aria-label="Open full-size proposal visual: Seven-day meal challenge"><img src="assets/pitch-taobao-28.jpg" alt="Seven-day meal challenge" loading="lazy" width="1440" height="810" decoding="async"></a><figcaption>A ¥200 budget would turn seven different wellness meals into a practical shopping challenge.<small>Click to view full-size</small></figcaption></figure><figure><a href="assets/pitch-taobao-30.jpg" target="_blank" rel="noopener" aria-label="Open full-size proposal visual: Dorm-room wellness challenge"><img src="assets/pitch-taobao-30.jpg" alt="Dorm-room wellness challenge" loading="lazy" width="1440" height="810" decoding="async"></a><figcaption>A ¥200 dorm-room makeover would connect a relatable wellness task with Taobao products.<small>Click to view full-size</small></figcaption></figure></div><div class="p-foot">
           <span class="p-lbl">My input</span>
-          <span class="tag k">Challenge week design — solo</span>
-        </div>
+          <span class="tag k">Independent contribution</span>
+        <span class="tag t">Team proposal</span></div>
       </article>
 
     </div>
@@ -666,90 +519,93 @@ html{scroll-behavior:smooth}
 @media(max-width:480px){ .art-wall{grid-template-columns:1fr} }
 </style>
 
-<section>
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">02 — Selected Pitch Artwork</span>
-      <h2>The answer is the product</h2>
-      <p>Four posters from my section of the Quark gaokao proposal — <strong>产品功能向创意物料示意, pp. 54–60</strong>. The pain-point series is built as question-and-answer pairs: a worry in plain language, and a companion poster where the answer is a screenshot of the feature itself. The choice format flattens a question nobody can answer into a binary the product can settle.</p>
-    </div>
 
-    <div class="art-wall">
-      <div class="poster">
-        <img src="assets/quark-pitch-q.jpg" alt="Pain-point poster: 报志愿 怕浪费分数 怎么办">
-        <div class="pc">
-          <div class="pl2">Pain point · 1 of 6</div>
-          <p>报志愿 怕「浪费分数」怎么办</p>
-        </div>
-      </div>
-      <div class="poster">
-        <img src="assets/quark-pitch-a.jpg" alt="Answer poster: 冲稳保一键get, 模拟选志愿">
-        <div class="pc">
-          <div class="pl2">The answer</div>
-          <p>冲稳保一键get → 【模拟选志愿】你的分数管理大师</p>
-        </div>
-      </div>
-      <div class="poster">
-        <img src="assets/quark-pitch-ab.jpg" alt="Choice poster: 选大学A 还是选专业B">
-        <div class="pc">
-          <div class="pl2">The choice format</div>
-          <p>选大学 A，还是选专业 B？不知选啥就选 Q</p>
-        </div>
-      </div>
-      <div class="poster">
-        <img src="assets/quark-pitch-guide.jpg" alt="Four-step feature guide poster">
-        <div class="pc">
-          <div class="pl2">Feature guide · templated</div>
-          <p>河北 · 史地政 · 620分 — one of a set rebuilt for each persona</p>
-        </div>
-      </div>
-    </div>
 
-    <div class="art-note">
-      <b>Why the pairing matters.</b> A pain-point poster on its own just repeats the customer's anxiety back at them. Pairing it with an answer poster — and making the answer a screenshot of the actual interface — turns two posters into one argument: <em>here is the worry, here is the screen that removes it</em>. That structure is what makes the set scale: swap the question, swap the screenshot. It is also why the feature guide is built per persona rather than as one generic walkthrough — the province, the subject combination and the score are all variables in the same template.
-    </div>
-  </div>
-</section>
+<footer class="pitch-footer"><div class="wrap"><nav class="case-navigation" aria-label="Portfolio navigation"><a href="index.html#work">← Back to selected work</a><a href="index.html#contact">Get in touch →</a></nav></div></footer>
 
-<section>
-  <div class="wrap">
-    <div class="closing">
-      <span class="eyebrow">Why this page is here</span>
-      <h2>The half of the job a case study can't show</h2>
-      <p>Every one of the six proposals had a section that was mine to carry, and each card names it — 产品功能创意物料, 抖音站内 IP 与挑战机制, 剧上脑的有声书, 游戏玩法规则, 题库内容, 一周挑战设计 — together with the page range it sits on.</p>
-      <p>Naming the section and the page is how I separate what I carried from what the team carried — and on every card, the part that was team work is labelled as team work.</p>
-      <p>What the six show is the part of the job that leaves no other trace — reading a brief with no obvious answer, finding the pressure the audience is actually under, and building a mechanic rather than a slogan.</p>
-      <div class="fine">Pitches answered at Shengu Media, 2023–2024; none reached production. Client names identify the work only; no confidential brief content, budgets, pricing or internal strategy is reproduced. The posters shown are from the Quark gaokao proposal.</div>
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="wrap">
-    <div class="demo-note">
-      <strong>Where this fits.</strong> This page is the companion to the five case studies on the portfolio homepage. Those show delivered campaigns; this shows how a brief gets answered when nothing exists yet. <a href="index.html" style="color:var(--accent-2)">Back to the portfolio →</a>
-    </div>
-  </div>
-</footer>
 
 <script>
 (function(){
-  var sel = '.pitch, .out-band, .poster, .closing, .art-note';
-  var targets = document.querySelectorAll(sel);
-  if(!('IntersectionObserver' in window)) return;
-  for(var i=0;i<targets.length;i++){
-    targets[i].style.opacity = '0';
-    targets[i].style.transform = 'translateY(14px)';
-    targets[i].style.transition = 'opacity .5s ease, transform .5s ease';
+  var selector = '.pitch, .out-band, .poster';
+  var candidates = Array.prototype.slice.call(document.querySelectorAll(selector));
+  var targets = candidates.filter(function(el){
+    return !candidates.some(function(parent){ return parent !== el && parent.contains(el); });
+  });
+  if(!('IntersectionObserver' in window) || !targets.length) return;
+  var motion = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+  var observer;
+  function show(el){ el.style.opacity = '1'; el.style.transform = 'none'; }
+  function showAll(){
+    if(observer) observer.disconnect();
+    targets.forEach(function(el){ el.style.transition = 'none'; show(el); });
   }
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){ e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; io.unobserve(e.target); }
+  if(motion && motion.matches){ showAll(); return; }
+  try{
+    observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ show(entry.target); observer.unobserve(entry.target); }
+      });
+    }, { threshold:0, rootMargin:'0px 0px -30px 0px' });
+    targets.forEach(function(el){
+      var rect = el.getBoundingClientRect();
+      if(rect.top < window.innerHeight - 30){ show(el); return; }
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(14px)';
+      el.style.transition = 'opacity .5s ease, transform .5s ease';
+      observer.observe(el);
     });
-  },{threshold:.08, rootMargin:'0px 0px -40px 0px'});
-  for(var j=0;j<targets.length;j++){ io.observe(targets[j]); }
+    if(motion){
+      var onChange = function(event){ if(event.matches) showAll(); };
+      if(motion.addEventListener) motion.addEventListener('change', onChange);
+      else if(motion.addListener) motion.addListener(onChange);
+    }
+    window.addEventListener('beforeprint', showAll);
+  }catch(error){ showAll(); }
 })();
 </script>
 <script>(function(){var e=document.getElementById("sp");if(!e)return;function u(){var h=document.documentElement.scrollHeight-window.innerHeight;e.style.width=(h>0?(window.pageYOffset/h)*100:0)+"%";}window.addEventListener("scroll",u,{passive:true});window.addEventListener("resize",u);u();})();</script>
-</body>
+<style>
+.p-block.mine{background:transparent;border-radius:0;padding:0;margin:0}
+.p-block.mine .p-lbl{color:var(--accent-2)}
+.p-block.mine p{color:var(--ink-2)}
+.pitches{align-items:start}
+.p-block p{font-size:14px;line-height:1.75}
+.activation-concepts{display:grid;gap:18px}
+.activation-concepts h4{font-family:var(--font-sans);font-size:14px;margin:3px 0 7px}
+.concept-number{font-size:11px;font-weight:700;color:var(--accent-2)}
+.pitch-footer{padding:32px 0 60px;border-top:1px solid var(--line)}
+.pitch-footer p{font-size:12.5px;color:var(--muted);margin-bottom:24px}
+.case-navigation{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.case-navigation a{color:var(--accent-2);font-size:14px;font-weight:600;text-decoration:none}
+.case-navigation a:hover{text-decoration:underline}
+</style><style>
+.proposal-visuals{padding:0 24px 22px;display:grid;gap:16px}
+.proposal-visuals figure{margin:0}
+.proposal-visuals a{display:block;border-radius:8px;overflow:hidden;background:#fff}
+.proposal-visuals img{display:block;width:100%;height:auto;max-height:420px;object-fit:contain}
+.proposal-visuals figcaption{font-size:12px;color:var(--ink-2);line-height:1.6;margin-top:8px}
+.proposal-visuals small{display:block;color:var(--muted);font-size:11px}
+@media print{.pitch,.poster,.out-band{opacity:1!important;transform:none!important}}
+</style><style>
+.quark-card-art{padding:0 24px 22px}
+.quark-card-art>h4{font-family:var(--font-sans);font-size:14px;margin:0 0 14px}
+.quark-card-art .art-wall{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.quark-card-art .poster .pc{padding:10px}
+.question-type-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.question-type-grid b{font-size:13px;color:var(--ink)}
+.question-type-grid p{font-size:13px;color:var(--muted);line-height:1.6;margin:5px 0 0}
+.fullsize-caption{font-size:12px;color:var(--muted);margin:4px 0 0;line-height:1.7}
+.fullsize-caption a{color:var(--accent-2);text-underline-offset:3px}
+@media(max-width:480px){.question-type-grid{grid-template-columns:1fr}}
+</style><style>
+.quark-card-art .mockup-preview{display:flex;align-items:center;justify-content:center;height:240px;background:#fff;overflow:hidden}
+.quark-card-art .mockup-preview img{width:100%;height:100%;object-fit:contain}
+.quark-card-art .mockup-preview:focus-visible{outline:3px solid #D6A84B;outline-offset:-3px}
+@media(max-width:480px){.quark-card-art .mockup-preview{height:190px}}
+</style><style>.mockup-hint{font-size:12px;color:var(--muted);margin:-6px 0 14px}.proposal-visuals figcaption small{color:var(--accent-2);margin-top:4px}.pitch-footer .case-navigation{margin-top:0}</style><script src="assets/work-navigation.js"></script><style>.pitches{grid-template-columns:minmax(0,1fr)}</style><style>.pitches{width:100%;max-width:960px;margin-inline:auto}.pitch{min-width:0;width:100%}.quark-card-art .art-wall{grid-template-columns:repeat(2,minmax(0,1fr))}@media(min-width:1000px){.quark-card-art .art-wall{grid-template-columns:repeat(4,minmax(0,1fr))}}@media(max-width:480px){.quark-card-art .art-wall{grid-template-columns:minmax(0,1fr)}}</style><style>
+/* Approximate shared source ratio: 481×693, 471×683 and 502×707. */
+.quark-card-art .mockup-preview{height:auto;aspect-ratio:7/10}
+.quark-card-art .mockup-preview img{width:100%;height:100%;object-fit:contain}
+.quark-card-art .guide-preview img{object-fit:cover;object-position:center top}
+</style></body>
 </html>

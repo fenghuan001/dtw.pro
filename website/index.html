@@ -4,23 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0A2E29">
-<title>Du Tingwei, Anna — Integrated Marketing &amp; Content Strategy</title>
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<meta name="description" content="Portfolio of integrated marketing and content strategy work — five campaigns in full, plus six competitive pitches. Based in Hong Kong.">
+<title>Du Tingwei, Anna — Marketing &amp; Communications</title>
 <link rel="canonical" href="https://fenghuan001.github.io/dtw.pro/">
 <meta property="og:url" content="https://fenghuan001.github.io/dtw.pro/">
+<meta property="og:image" content="https://fenghuan001.github.io/dtw.pro/assets/og-card.jpg">
+<meta name="twitter:image" content="https://fenghuan001.github.io/dtw.pro/assets/og-card.jpg">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta name="description" content="Portfolio of integrated marketing and content strategy work — five campaigns in full, plus six competitive pitches. Based in Hong Kong.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Du Tingwei, Anna">
-<meta property="og:title" content="Du Tingwei, Anna — Integrated Marketing & Content Strategy">
+<meta property="og:title" content="Du Tingwei, Anna — Marketing &amp; Communications">
 <meta property="og:description" content="Portfolio of integrated marketing and content strategy work — five campaigns in full, plus six competitive pitches. Based in Hong Kong.">
-<meta property="og:image" content="https://fenghuan001.github.io/dtw.pro/assets/og-card.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Du Tingwei, Anna — Account Executive, Integrated Marketing and Content Strategy">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Du Tingwei, Anna — Integrated Marketing & Content Strategy">
+<meta name="twitter:title" content="Du Tingwei, Anna — Marketing &amp; Communications">
 <meta name="twitter:description" content="Portfolio of integrated marketing and content strategy work — five campaigns in full, plus six competitive pitches. Based in Hong Kong.">
-<meta name="twitter:image" content="https://fenghuan001.github.io/dtw.pro/assets/og-card.jpg">
 <style>
 :root{
   --bg:#FAFAF9; --ink:#111214; --ink-2:#3B3D42; --muted:#82858D;
@@ -91,8 +91,8 @@ section+section{border-top:1px solid var(--line)}
 }
 @media(max-width:460px){ .num-grid{grid-template-columns:1fr} .num{padding:20px 22px} }
 </style>
-</head>
-<body>
+<style>body{--muted:#62666E}a:focus-visible,button:focus-visible{outline:3px solid #D6A84B;outline-offset:5px}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation:none!important;transition:none!important}}</style><style>.num b{font-size:clamp(22px,2.8vw,32px)}.skip-link{position:fixed;top:8px;left:8px;z-index:2000;background:white;padding:8px 14px;transform:translateY(-150%)}.skip-link:focus{transform:none}</style><link rel="stylesheet" href="assets/work-navigation.css"><style>img{height:auto}</style><style>.hero .hero-availability{margin:16px 0 0;font-size:13px;line-height:1.6;color:rgba(255,255,255,.72)}</style></head>
+<body><a class="skip-link" href="#main-content">Skip to content</a>
 <div id="sp" aria-hidden="true"></div>
 <style id="plcss">
 .sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%)}
@@ -158,19 +158,20 @@ section+section{border-top:1px solid var(--line)}
     if(reduce.matches) rest(); else frame = requestAnimationFrame(tick);
   }
   function done(){
+    if(ready) return;
     ready = true;
     if(!shown){ loader.style.display = 'none'; document.body.setAttribute('aria-busy','false'); return; }
-    // let the star finish the orbit it is currently on, rather than cutting it off
-    var el = performance.now() - showAt;
-    finishAt = showAt + Math.max(1, Math.ceil(el / ORBIT)) * ORBIT;
+    finishAt = performance.now();
     if(reduce.matches) hide(); else frame = requestAnimationFrame(tick);
   }
   window.finishLogoLoading = done;
 
   // only appear when the page is actually slow
   setTimeout(function(){ if(!ready) show(); }, GRACE);
-  if(document.readyState === 'complete') done();
-  else window.addEventListener('load', done, { once:true });
+  // Release the overlay when readable HTML is ready, independently of images.
+  setTimeout(done, 2000);
+  if(document.readyState !== 'loading') done();
+  else document.addEventListener('DOMContentLoaded', done, { once:true });
   document.addEventListener('visibilitychange', function(){ if(!document.hidden && shown && ready) hide(); });
 })();
 </script>
@@ -201,9 +202,9 @@ html{scroll-behavior:smooth}
   <div class="in">
     <span class="brand" role="img" aria-label="Du Tingwei — personal mark"><svg class="mark" viewBox="0 0 1254 1254" fill="currentColor" aria-hidden="true" focusable="false"><defs><clipPath id="tbm-l"><rect x="345" y="760" width="151" height="150"/></clipPath><clipPath id="tbm-r"><rect x="750" y="600" width="240" height="270"/></clipPath><mask id="tbm-o" maskUnits="userSpaceOnUse" x="0" y="0" width="1254" height="1254" style="mask-type:luminance"><rect width="1254" height="1254" fill="white"/><path clip-path="url(#tbm-l)" d="M 351 815 C 544 817 864 743 1027 616" fill="none" stroke="black" stroke-width="36"/><path clip-path="url(#tbm-r)" d="M 351 883 C 577 888 912 773 1058 630" fill="none" stroke="black" stroke-width="36"/></mask></defs><path mask="url(#tbm-o)" fill-rule="evenodd" d="M 252 325 L 578 325 C 808 325 950 444 956 650 C 961 854 832 978 590 978 L 249 978 L 249 971 C 327 957 354 938 354 869 L 354 423 C 354 362 330 341 252 333 Z M 487 398 L 487 891 C 487 936 508 952 575 952 C 717 952 803 857 803 652 C 803 450 717 347 579 347 L 528 347 C 497 347 487 362 487 398 Z"/><path d="M 341 644 C 236 683 132 735 129 786 C 123 849 218 881 351 883 C 577 888 912 773 1058 630 C 1088 599 1099 566 1101 538 C 1083 569 1058 591 1027 616 C 864 743 544 817 351 815 C 244 814 183 806 178 782 C 171 752 244 694 336 651 Q 342 648 341 644 Z"/><path d="M 1117 403 C 1109 458 1099 469 1045 478 C 1098 485 1109 498 1117 551 C 1125 498 1136 486 1190 479 C 1136 471 1126 458 1117 403 Z"/></svg></span>
     <nav class="nav" aria-label="Main">
-      <a href="#work">Selected Work</a>
+      <div class="work-dropdown"><a href="#work">Selected Work</a><button class="work-toggle" type="button" aria-label="Show selected projects" aria-expanded="false" aria-controls="work-projects"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="m2 4 4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></button><div class="work-projects" id="work-projects" hidden><a href="haidilao-case.html">Haidilao</a><a href="quark-scan-king-case.html">Quark Scan King</a><a href="juhuasuan-case.html">Juhuasuan</a><a href="eleme-lichun-case.html">Ele.me</a><a href="taobao-live-case.html">Taobao Live</a></div></div>
       <a href="pitch-experience.html">Pitch</a>
-      <a href="anna-du-cv.pdf" download>CV</a>
+      <a href="resume.html">Resume</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -293,15 +294,14 @@ html{scroll-behavior:smooth}
     <span class="eyebrow">Portfolio · 2026</span>
     <h1>Du Tingwei, Anna</h1>
     <div class="zh">杜婷玮</div>
-    <div class="role">Account Executive — Integrated Marketing · Content Strategy</div>
-    <p class="hero-lede">I work on integrated campaigns for tech and FMCG brands — writing the campaign copy, authoring the KOL briefs, designing the social graphics and running the publishing schedule. Fewer handoffs, and one person who understands the whole campaign rather than one slice of it.</p>
+    <div class="role">Integrated Marketing &amp; Social Content</div>
+    <p class="hero-lede">I have agency experience in campaign planning, social content and influencer coordination, supporting projects for many brands. Based in Hong Kong, I am currently pursuing an MA in Communication and New Media at City University of Hong Kong.</p>
     <div class="contact">
-      <a class="primary" href="mailto:dutingwei003@outlook.com">Email me</a>
+      <a class="primary" href="#work">View Selected Work</a><a href="mailto:dutingwei003@outlook.com">Email Me</a>
       <span class="print-only">dutingwei003@outlook.com</span>
-      <a href="anna-du-cv.pdf" download>CV (PDF)</a>
-      <span>Hong Kong</span>
-      <span>Chinese · English (fluent) · Cantonese (basic)</span>
+      <a href="resume.html">View Resume</a><a href="assets/du-tingwei-anna-cv.pdf" download="Du Tingwei, Anna - CV.pdf">Download CV (PDF)</a>
     </div>
+    <p class="hero-availability">Based in Hong Kong · Available to start immediately</p>
   </div>
 </header>
 
@@ -313,7 +313,7 @@ html{scroll-behavior:smooth}
         <span class="hint">Across twelve campaigns and competitive pitches</span>
       </div>
       <div class="num-grid">
-        <div class="num"><b>130+</b><span>pieces of branded content produced</span></div>
+        <div class="num"><b>200+</b><span>pieces of branded content produced</span></div>
         <div class="num"><b>80+</b><span>KOL collaborations planned and briefed</span></div>
         <div class="num"><b>12</b><span>campaigns and competitive pitches</span></div>
         <div class="num"><b>6+</b><span>post-campaign reviews supported</span></div>
@@ -334,6 +334,21 @@ html{scroll-behavior:smooth}
     </div>
   </div>
 </section>
+<section class="capabilities" aria-labelledby="capabilities-title">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Core capabilities</span><h2 id="capabilities-title">From planning to production and execution</h2></div>
+    <div class="bg-grid">
+      <div class="bg-item"><h3>AI Workflows</h3><p>AI-assisted data analysis, consumer insight exploration, website creation, copywriting and poster generation, with human review and refinement.</p></div>
+      <div class="bg-item"><h3>Content</h3><p>Campaign copywriting, social posts, creator briefs and fan-community content tailored to different audiences.</p></div>
+      <div class="bg-item"><h3>Execution</h3><p>Publishing schedules, team and vendor coordination, and on-site execution of offline activations.</p></div>
+      <div class="bg-item"><h3>Influencers</h3><p>KOL selection, briefing, coordination and content review; liaison with the media team to arrange creator bookings and place orders.</p></div>
+      <div class="bg-item"><h3>Reporting</h3><p>Campaign data collection, performance reporting and post-campaign review support.</p></div>
+      <div class="bg-item"><h3>Tools &amp; Platforms</h3><p><strong>Design &amp; video:</strong> Adobe Photoshop, Jianying (剪映), Premiere Pro and Canva<br><strong>Publishing:</strong> Xiumi (秀米) and iH5<br><strong>Web &amp; AI:</strong> VS Code and Codex<br><strong>Data:</strong> SPSS; basic SQL and Python</p></div>
+
+
+    </div>
+  </div>
+</section>
 <style>
 .case.feature{grid-column:1 / -1}
 .case.feature .case-thumb{height:230px}
@@ -344,12 +359,12 @@ html{scroll-behavior:smooth}
 @media(max-width:900px){ .case.feature .case-thumb{height:180px} .case.feature .case-num{font-size:56px} }
 </style>
 
-<section id="work">
+<main id="main-content"><section id="work">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Selected Work</span>
-      <h2>Five campaigns, in full</h2>
-      <p>Each case states the brief, what I owned, what I produced and what it returned. Every figure comes from a source document or my own delivery record.</p>
+      <h2>Selected campaign experience</h2>
+      <p>Explore the campaign context, my contribution and selected deliverables. Each case distinguishes my work from the wider campaign results.</p>
     </div>
 
     <div class="cases">
@@ -362,7 +377,7 @@ html{scroll-behavior:smooth}
         <div class="case-body">
           <div class="case-meta"><span>618 campaign · Yihai International</span></div>
           <h3>Haidilao Seasoning × Line Dog</h3>
-          <p>A 618 campaign across PR, social, offline and influencer. I wrote the launch teaser and the partner-brand activation, briefed and placed the media PR, designed the offline event zones, and sourced 60 local KOLs directly.</p>
+          <p>A 618 campaign combining social content, PR, influencer activity and offline events. I developed publishing and partner-brand content, prepared the PR brief, coordinated local KOLs, and contributed to offline event planning and on-site execution.</p>
           <div class="case-stats">
             <span><b>4</b> workstreams owned solo</span>
             <span><b>60</b> KOLs sourced directly</span>
@@ -379,7 +394,7 @@ html{scroll-behavior:smooth}
         <div class="case-body">
           <div class="case-meta"><span>Product campaign · Alibaba Group</span></div>
           <h3>Quark Scan King</h3>
-          <p>One brief, two parallel lines — a product awareness line and a Dunhuang cultural partnership. I wrote four topic sets, owned the KOL content plan, and designed the campaign graphics.</p>
+          <p>A campaign combining product communication with a Dunhuang cultural partnership. I wrote topic copy, planned creative directions for KOL content, created social graphics and compiled campaign performance reports.</p>
           <div class="case-stats">
             <span><b>110M+</b> Weibo reads</span>
             <span><b>2.7</b> CPM</span>
@@ -390,17 +405,16 @@ html{scroll-behavior:smooth}
 
       <a class="case" href="juhuasuan-case.html">
         <div class="case-thumb" style="--tint:rgba(222,47,27,.42)">
-          <span class="case-tag">Hot-moment<br>Social Campaign</span>
+          <span class="case-tag">Douyin<br>Social Campaign</span>
           <span class="case-num">03</span>
         </div>
         <div class="case-body">
           <div class="case-meta"><span>Douyin campaign · Alibaba Group</span></div>
           <h3>Juhuasuan — Northeast New Year</h3>
-          <p>A New Year campaign run as a portfolio of Douyin topic bets. I proposed the topic that trended, wrote a brief for every topic, and reviewed 100+ creator videos before publication.</p>
+          <p>A New Year campaign built around Northeast China’s seasonal culture on Douyin. I developed topic ideas and creator briefs for Douyin topic marketing, reviewed scripts and videos, and coordinated with external vendors on campaign delivery.</p>
           <div class="case-stats">
-            <span><b>#26</b> Douyin chart</span>
+            <span><b>#26</b> on Douyin’s Entertainment Chart</span>
             <span><b>100+</b> scripts reviewed</span>
-            <span><b>17</b> locations covered</span>
           </div>
         </div>
       </a>
@@ -413,7 +427,7 @@ html{scroll-behavior:smooth}
         <div class="case-body">
           <div class="case-meta"><span>Seasonal campaign · 2024</span><span>Ele.me</span></div>
           <h3>Ele.me — Lichun 立春</h3>
-          <p>A three-day seasonal campaign built on a single wordplay insight. I authored the platform KOL brief that every creator ran on, and ran day-to-day execution across Weibo and Xiaohongshu.</p>
+          <p>A three-day campaign connecting Lichun food traditions with social conversation. I wrote the food-creator brief and coordinated content delivery across Weibo and Xiaohongshu.</p>
           <div class="case-stats">
             <span>Exceeded <b>Meituan Waimai</b> on heat</span>
             <span><b>64.4M+</b> Weibo reads</span>
@@ -430,7 +444,7 @@ html{scroll-behavior:smooth}
         <div class="case-body">
           <div class="case-meta"><span>Fan community activation · 2023</span><span>Taobao Live</span></div>
           <h3>Taobao Live × Tmall — 上播大明星</h3>
-          <p>Fan-community content for 30+ celebrity livestreams, produced through an AI-assisted workflow that let a single writer cover roughly twenty fan groups per artist.</p>
+          <p>A Double 11 celebrity livestream campaign with content tailored to fan communities. I wrote community copy and livestream highlight scripts, using AI-assisted drafting followed by manual editing.</p>
           <div class="case-stats">
             <span><b>436</b> copy variants</span>
             <span><b>30+</b> livestreams</span>
@@ -468,8 +482,8 @@ html{scroll-behavior:smooth}
     <div class="pitch-band">
       <div class="pb-l">
         <span class="eyebrow">Pitch Experience</span>
-        <h2>Six briefs, answered from scratch</h2>
-        <p>Competitive pitches are where you find out how someone thinks with no brand guideline to hide behind. Six briefs I worked on — each card gives the brief, the idea, the exact section of the proposal that was mine, and the page range it sits on.</p>
+        <h2>Creative contributions to six pitches</h2>
+        <p>I contributed to six competitive pitches, developing content ideas, KOL activations, offline activations, visual mockups and campaign mechanics. Each proposal highlights the sections I developed within the team’s overall approach. These projects remained at the proposal stage and were not executed.</p>
       </div>
       <div class="pb-r">
         <div class="pb-clients">
@@ -477,10 +491,10 @@ html{scroll-behavior:smooth}
         </div>
         <div class="pb-stats">
           <div><b>6</b><span>pitches</span></div>
-          <div><b>6</b><span>sections owned solo</span></div>
-          <div><b>4</b><span>posters shown</span></div>
+          <div><b>6</b><span>named contributions</span></div>
+          <div><b>4</b><span>selected visual mockups</span></div>
         </div>
-        <a class="pb-link" href="pitch-experience.html">View the pitch work →</a>
+        <a class="pb-link" href="pitch-experience.html">Explore Pitch Projects →</a>
       </div>
     </div>
   </div>
@@ -489,48 +503,48 @@ html{scroll-behavior:smooth}
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Background</span>
-      <h2>Where I've worked and studied</h2>
+      <h2>Experience &amp; Education</h2>
     </div>
     <div class="bg-grid">
       <div class="bg-item">
         <div class="bg-when">Sep 2019 – Jun 2023</div>
         <h3>Hunan Normal University</h3>
-        <p>BA in Advertising, School of Journalism and Communication · Changsha, Hunan · GPA 85.2/100.</p>
+        <p>BA in Advertising, School of Journalism and Communication. GPA: 85.2/100.</p>
       </div>
       <div class="bg-item">
         <div class="bg-when">Jul 2022 – Sep 2022</div>
         <h3>Hunan EE-Advertising Co., Ltd.</h3>
-        <p>New Media Operations Intern. Live-stream content strategy for an older audience, with audience analysis across 30+ products. Contributed to two competitive pitches — a video concept was adopted into the WALOVI pitch proposal — and co-authored performance reports on entertainment IP campaigns.</p>
+        <p>New Media Operations Intern. Researched <strong>livestream</strong> audiences and selling points for <strong>30+</strong> products, developed presentation ideas and host scripts, and supported <strong>2</strong> brand proposals and campaign performance reporting.</p>
       </div>
       <div class="bg-item">
         <div class="bg-when">Oct 2023 – Jul 2024</div>
-        <h3>Shengu Media 神谷文化</h3>
-        <p>Account Executive, Brand Business Center · an entertainment-content and social marketing agency in Beijing. Worked across Quark, Ele.me, Haidilao Seasoning and Alibaba's Taobao Live and Juhuasuan accounts.</p>
+        <h3>Beijing Shiny Gold Interactive Digital Technology Co., Ltd.</h3>
+        <p>Account Executive, Brand Business Center. Contributed to integrated campaigns through social content, KOL coordination, vendor liaison and offline activation execution for technology and consumer brands.</p>
       </div>
       <div class="bg-item">
         <div class="bg-when">Nov 2024 – Jun 2026</div>
         <h3>Jingyi Environmental Protection Equipment</h3>
-        <p>Social Media Operations Specialist, Sales Dept · Hengshui, Hebei. Product photography and video for the company's own channels, Douyin video production, and inbound enquiry handling — 50+ leads collected and handed to the sales team.</p>
+        <p>Social Media Operations Specialist, Sales Department. Created product photography and videos for company channels, produced Douyin content, and handled inbound enquiries for sales follow-up.</p>
       </div>
       <div class="bg-item">
         <div class="bg-when">Sep 2026 – Present</div>
         <h3>City University of Hong Kong</h3>
-        <p>MA in Communication and New Media. Based in Hong Kong, and available for roles across account management, content strategy and social marketing.</p>
+        <p>Currently pursuing an MA in Communication and New Media.</p>
       </div>
     </div>
   </div>
 </section>
 
-<footer class="foot" id="contact">
+</main><footer class="foot" id="contact">
   <div class="wrap">
     <h2>Let's talk</h2>
-    <p class="lead">I'm based in Hong Kong and happy to walk through any of these cases in more detail — including the parts of the work that did not go to plan.</p>
+    <p class="lead">I’m based in Hong Kong and interested in opportunities in integrated marketing, social content and brand communications. Get in touch to discuss a role or learn more about my work.</p>
     <div class="contact">
       <a class="primary" href="mailto:dutingwei003@outlook.com">dutingwei003@outlook.com</a>
-      <a href="anna-du-cv.pdf" download>CV (PDF)</a>
+      <a href="resume.html">View Resume</a><a href="assets/du-tingwei-anna-cv.pdf" download="Du Tingwei, Anna - CV.pdf">Download CV (PDF)</a>
     </div>
     <div class="fine">
-      Case studies describe work produced at Shengu Media for the named clients. Figures are taken from campaign reviews and delivery records; where a client did not share performance data, the case says so rather than estimating. Client budgets, supplier pricing and internal commercial terms are not reproduced.
+      Selected work from my time at Beijing Shiny Gold Interactive Digital Technology Co., Ltd. Each case distinguishes my contribution from team deliverables and overall campaign results. Client and partner assets are credited where shown.
     </div>
   </div>
 </footer>
@@ -553,5 +567,5 @@ html{scroll-behavior:smooth}
 })();
 </script>
 <script>(function(){var e=document.getElementById("sp");if(!e)return;function u(){var h=document.documentElement.scrollHeight-window.innerHeight;e.style.width=(h>0?(window.pageYOffset/h)*100:0)+"%";}window.addEventListener("scroll",u,{passive:true});window.addEventListener("resize",u);u();})();</script>
-</body>
+<script src="assets/work-navigation.js"></script></body>
 </html>
